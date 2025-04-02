@@ -18,7 +18,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Learning",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     // Updated rules for the workshop
     rules: [
       "1. Generative AI",
@@ -65,14 +65,15 @@ const eventsData = [
   {
     id: 2,
     title: "Clash of Minds",
-    description: "Debate Competition: - Battle of intellect and problem-solving skills",
+    description:
+      "Debate Competition: - Battle of intellect and problem-solving skills",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Competition",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each participant/team will be given maximum 10 minutes time to speak either in favour or against of the subject.",
       "Warning bell will be given after 8 minutes and a final bell after 10 minutes. If the participants exceed the allocated time then the marks will be deducted at the discretion of the judges.",
@@ -105,14 +106,15 @@ const eventsData = [
   {
     id: 3,
     title: "Social Media Designing",
-    description: "Website Designing: - Supported by Google Developer Groups Patna",
+    description:
+      "Website Designing: - Supported by Google Developer Groups Patna",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "3:00 PM - 5:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Design",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Participants will compete individually.",
       "Participants must design a fully functional social media website where the website should have features including User Registration & Login Profile Page, Post Creation (Text/Image), Like/Comment Feature and Responsive Design.",
@@ -148,15 +150,14 @@ const eventsData = [
   {
     id: 4,
     title: "Code-A-Vita",
-    description:
-      "Debug Code: -Supported by Google Developer Groups Patna",
+    description: "Debug Code: -Supported by Google Developer Groups Patna",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "11:00 AM - 1:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Debug Code",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "The contestant must go through two rounds as mentioned below, this competition is entirely based on your coding skills.",
       "After completing the registration contestants should click on this link to join the telegram:",
@@ -191,14 +192,15 @@ const eventsData = [
   {
     id: 5,
     title: "Tech Story",
-    description: "Narrate your tech journey and innovations through storytelling",
+    description:
+      "Narrate your tech journey and innovations through storytelling",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "3:00 PM - 5:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Presentation",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "PURPOSES:",
       "The purposes of this competition are to build the confidence for public speaking, improve the ability in telling stories in English and encourage the participants to be creative in engaging people or audiences.",
@@ -235,14 +237,15 @@ const eventsData = [
   {
     id: 6,
     title: "Tech Shot",
-    description: "Theme: - Street Vibes, Video Making Competition (Online Submission)",
+    description:
+      "Theme: - Street Vibes, Video Making Competition (Online Submission)",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "11:00 AM - 5:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Photography",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "This event is based on Video Editing and winners will be decided on the basis of their videos.",
       "There will be no such room requirements as everything will be online.",
@@ -286,7 +289,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Photography",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       'All photos must align with the theme "Unnat Bihar, Viksit Bihar" (Developed & Progressive Bihar).',
       "Photos must be original and taken by the participant. Only minimal editing (brightness, contrast, cropping) is allowed—no excessive filters or AI-generated content.",
@@ -324,7 +327,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Quiz",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Article 1: Subject",
       "The quiz consists in a multiple-choice questionnaire based on the Information Technology. The winners will be chosen through an automatic draw from the names of the participants who have realized a perfect score.",
@@ -390,7 +393,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Entertainment",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each performer gets a fixed time slot of 5-7 minutes. Exceeding the time limit may result in deduction of points.",
       "The content must be original and plagiarism of jokes is strictly prohibited and reusing well-known internet jokes or memes should be avoided.",
@@ -433,7 +436,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Game",
     day: "21",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each team should consist of 3 to 5 members.",
       "All teams begin at the designated starting location. The first clue is given at the start, leading to the next location.",
@@ -468,14 +471,15 @@ const eventsData = [
   {
     id: 11,
     title: "Hackathon",
-    description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World",
+    description:
+      "Theme: - Digital Earth: Smart Solutions for a Sustainable World",
     image: placeholderImage,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna",
     category: "Coding",
     day: "22",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each team will have minimum 2 and maximum 4 members.",
       "Participants must arrange their own necessary equipment, including laptops, software, and any other required resources.",
@@ -523,7 +527,7 @@ const eventsData = [
     venue: " ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Design",
     day: "22",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each Participant can make only one Poster.",
       "The poster must be made on the A3 size sheet with margins (0.5 inches) drawn with black pen/marker.",
@@ -564,14 +568,15 @@ const eventsData = [
   {
     id: 13,
     title: "Treasure Hunt (University)",
-    description: "Advanced treasure hunt for university students with technical challenges",
+    description:
+      "Advanced treasure hunt for university students with technical challenges",
     image: placeholderImage,
     date: "April 22, 2025",
     time: "9:00 AM - 10:00 AM",
     venue: ": ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Game",
     day: "22",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each team should consist of 3 to 5 members.",
       "All teams begin at the designated starting location. The first clue is given at the start, leading to the next location.",
@@ -614,7 +619,7 @@ const eventsData = [
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Fashion",
     day: "23",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "It is a team event. A team can have maximum of 8 members.",
       "Time limit for every team would be 6 minutes (Including setup and the performance both).",
@@ -672,7 +677,7 @@ const eventsData = [
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Fashion",
     day: "23",
-    registrationUrl: "https://forms.gle/techphilia-registration",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "It is a team event. A team can have maximum of 8 members.",
       "Time limit for every team would be 6 minutes (Including setup and the performance both).",
@@ -720,7 +725,7 @@ const eventsData = [
       },
     ],
   },
-]
+];
 
 const Events = () => {
   const [activeFilter, setActiveFilter] = useState("all")
