@@ -1,4 +1,4 @@
-import placeholderImage from "../assets/placeholder.svg"
+
 import gallery1 from "../assets/gallery/gallery1.jpg"
 import gallery2 from "../assets/gallery/gallery2.jpg"
 import gallery3 from "../assets/gallery/gallery3.jpg"

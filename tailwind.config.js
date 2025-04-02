@@ -1,85 +1,72 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    darkMode: ["class"],
-    content: [
-      "./index.html",
-      "./src/**/*.{js,ts,jsx,tsx}",
-      "*.{js,ts,jsx,tsx,mdx}",
-      "app/**/*.{ts,tsx}",
-      "components/**/*.{ts,tsx}",
-    ],
-    theme: {
-      extend: {
-        colors: {
-          border: "hsl(var(--border))",
-          input: "hsl(var(--input))",
-          ring: "hsl(var(--ring))",
-          background: "hsl(var(--background))",
-          foreground: "hsl(var(--foreground))",
-          primary: {
-            DEFAULT: "hsl(var(--primary))",
-            foreground: "hsl(var(--primary-foreground))",
-            DEFAULT: "#0A2463", // Deep navy blue
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#22c55e', // Green
+        secondary: '#eab308', // Yellow
+        dark: {
+          bg: '#0f172a',
+          card: '#1e293b',
+          border: '#334155',
+        },
+        light: {
+          bg: '#f8fafc',
+          card: '#ffffff',
+          border: '#e2e8f0',
+        }
+      },
+      backgroundImage: {
+        'grid-pattern': "url('/src/assets/grid-pattern.svg')",
+        'circuit-pattern': "url('/src/assets/circuit-pattern.svg')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      animation: {
+        'spin': 'spin 1s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-up': 'fade-up 0.5s ease-out forwards',
+        'gradient': 'gradient 8s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'fade-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)',
           },
-          secondary: {
-            DEFAULT: "hsl(var(--secondary))",
-            foreground: "hsl(var(--secondary-foreground))",
-            DEFAULT: "#D4AF37", // Gold/champagne
-          },
-          destructive: {
-            DEFAULT: "hsl(var(--destructive))",
-            foreground: "hsl(var(--destructive-foreground))",
-          },
-          muted: {
-            DEFAULT: "hsl(var(--muted))",
-            foreground: "hsl(var(--muted-foreground))",
-          },
-          accent: {
-            DEFAULT: "hsl(var(--accent))",
-            foreground: "hsl(var(--accent-foreground))",
-          },
-          popover: {
-            DEFAULT: "hsl(var(--popover))",
-            foreground: "hsl(var(--popover-foreground))",
-          },
-          card: {
-            DEFAULT: "hsl(var(--card))",
-            foreground: "hsl(var(--card-foreground))",
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
           },
         },
-        borderRadius: {
-          lg: "var(--radius)",
-          md: "calc(var(--radius) - 2px)",
-          sm: "calc(var(--radius) - 4px)",
-        },
-        keyframes: {
-          marquee: {
-            "0%": { transform: "translateX(0%)" },
-            "100%": { transform: "translateX(-100%)" },
+        gradient: {
+          '0%': {
+            'background-position': '0% 50%',
           },
-          "fade-up": {
-            "0%": {
-              opacity: "0",
-              transform: "translateY(10px)",
-            },
-            "100%": {
-              opacity: "1",
-              transform: "translateY(0)",
-            },
+          '50%': {
+            'background-position': '100% 50%',
           },
-        },
-        animation: {
-          marquee: "marquee 25s linear infinite",
-          "fade-up": "fade-up 0.5s ease-out",
-        },
-        backgroundImage: {
-          "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-          "hero-pattern":
-            'linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("/hero-bg.jpg")',
+          '100%': {
+            'background-position': '0% 50%',
+          },
         },
       },
+      transitionProperty: {
+        'height': 'height',
+      },
     },
-    plugins: [require("tailwindcss-animate")],
-  }
+  },
+  plugins: [],
+}
   
   
