@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+  }
+
+  .nav-link {
+    @apply relative text-primary hover:text-secondary transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-5px] h-[2px] w-0 bg-secondary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:border-secondary/30;
+  }
+
+  .premium-button {
+    @apply px-6 py-2 bg-primary text-white rounded-md shadow-md transition-all duration-300 hover:bg-secondary hover:text-primary font-medium;
+  }
+
+  .premium-button-outline {
+    @apply px-6 py-2 bg-transparent text-primary border border-primary rounded-md shadow-sm transition-all duration-300 hover:bg-primary/5 font-medium;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-primary mb-6 relative inline-block;
+  }
+
+  .section-title::after {
+    @apply content-[''] absolute left-0 bottom-[-10px] h-[3px] w-[60px] bg-secondary;
+  }
+}
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Add these styles to your existing CSS file */
+
+/* Page Transition Styles */
+.page-transition {
+  position: relative;
+  width: 100%;
+}
+
+.animate-fade {
+  animation: simpleFade 0.5s ease-out;
+}
+
+@keyframes simpleFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Smooth scrolling for the entire site */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+}
+
+/* Add this to your existing CSS file */
+body {
+  overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+  padding-top: 0; /* Remove any padding-top as we'll handle it in the layout */
+}
+
+/* Add this to your existing CSS file */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 90s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Hide the original "Our Partners" heading in PartnersMarquee */
+.overflow-hidden.py-10.bg-gray-50 > h2 {
+  display: none;
+}
+
+/* Ensure the marquee container takes full width without causing overflow */
+.overflow-hidden.py-10.bg-gray-50 {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Ensure section titles are centered */
+.section-title {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+/* Center the yellow line under section titles */
+.section-title::after {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Add a wrapper for section titles to ensure they're centered */
+.section-title-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+/* Smooth hover effects for links */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Navigation link styles */
+.nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+
+/* Premium button hover effect */
+.premium-button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
