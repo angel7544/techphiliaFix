@@ -1,5 +1,3 @@
-"use client"
-
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -10,6 +8,8 @@ import Gallery from "./pages/Gallery"
 import Contact from "./pages/Contact"
 import PageTransition from "./components/PageTransition"
 import SEO from "./components/SEO"
+
+import { ThemeProvider } from "./context/ThemeContext"
 import { useEffect } from "react"
 
 // ScrollToTop component to reset scroll position on page change
@@ -27,12 +27,10 @@ function ScrollToTop() {
 function AppContent() {
   return (
     <>
-      <SEO /> {/* Default SEO for pages that don't specify their own */}
+      <SEO />
       <ScrollToTop />
       <Navbar />
-      <div className="pt-16">
-        {" "}
-        {/* Add padding-top to account for fixed navbar */}
+      <div className="pt-16 min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
         <PageTransition>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,9 +49,11 @@ function AppContent() {
 // Root component
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   )
 }
 

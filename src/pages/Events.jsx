@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Calendar, Clock, MapPin, Search, X, Phone, User } from "lucide-react"
+import { Calendar, Clock, MapPin, Search, X, Phone, User, Grid, Layout } from "lucide-react"
 import placeholderImage from "../assets/placeholder.svg"
 import SEO from "../components/SEO"
 
