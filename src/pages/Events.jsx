@@ -872,8 +872,8 @@ const Events = () => {
         title="Events"
         description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Discover workshops, competitions, and tech events from 21st to 23rd April 2025."
         keywords="techphilia events, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
-        image="https://aiitpevent.in/events-og-image.png"
-        url="https://aiitpevent.in/events"
+        image="https://www.aiitpevent.in/#/events-og-image.png"
+        url="https://www.aiitpevent.in/#/events"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
@@ -1013,7 +1013,7 @@ const Events = () => {
                     alt={event.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-0 right-0 bg-secondary text-primary font-bold py-1 px-3 rounded-bl-md">
+                  <div className="absolute top-0 right-0 bg-secondary text-white font-bold py-1 px-3 rounded-bl-md">
                     {event.category}
                   </div>
                 </div>
@@ -1080,7 +1080,7 @@ const Events = () => {
                   </button>
                 </div>
                 <div className="mt-2 text-sm text-gray-500">
-                  <span className="inline-block bg-secondary text-primary px-2 py-1 rounded-md">
+                  <span className="inline-block bg-secondary text-white px-2 py-1 rounded-md">
                     {selectedEvent.category}
                   </span>
                 </div>

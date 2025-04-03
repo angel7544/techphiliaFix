@@ -16,16 +16,16 @@ const Footer = () => {
               The Annual Technical Fest that brings together technology enthusiasts from across the nation.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-white hover:text-secondary transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100083105208389" className="text-white hover:text-secondary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" className="text-white hover:text-secondary transition-colors">
+              <a href="https://www.instagram.com/amityuniversitypatna/" className="text-white hover:text-secondary transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" className="text-white hover:text-secondary transition-colors">
+              <a href="https://x.com/amity_patna?t=6-3sCQxmfHyThTcf3h4riQ&s=09" className="text-white hover:text-secondary transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-white hover:text-secondary transition-colors">
+              <a href="https://www.linkedin.com/school/amity-university-patna/" className="text-white hover:text-secondary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
@@ -67,11 +67,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-2 text-secondary mt-1 flex-shrink-0" />
-                <span className="text-white/90 font-medium">123 College Road, Tech City, India</span>
+                <span className="text-white/90 font-medium">Amity University, Rupaspur Campus, Patna, India</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2 text-secondary flex-shrink-0" />
-                <span className="text-white/90 font-medium">+91 98765 43210</span>
+                <span className="text-white/90 font-medium">+91 6206882275</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2 text-secondary flex-shrink-0" />
