@@ -15,6 +15,9 @@ import img11 from "../assets/gallery/img11.jpg"
 import img12 from "../assets/gallery/img12.jpg"
 import img13 from "../assets/gallery/img13.jpg"
 import img14 from "../assets/gallery/img14.jpg"
+import video1 from "../assets/gallery/video1.mp4"
+import video2 from "../assets/gallery/video2.mp4"
+import video3 from "../assets/gallery/video3.mp4"
 import SEO from "../components/SEO"
 import { Play } from "lucide-react"
 
@@ -42,20 +45,20 @@ const galleryVideos = [
     id: 1,
     title: "Amivogue (University)",
     thumbnail: img1, // Using an image as thumbnail
-    videoUrl: "/src/assets/gallery/video1.mp4", // Replace with actual video URL
+    videoUrl: video1, // Replace with actual video URL
     
   },
   {
     id: 2,
     title: "Amivogue (School)",
     thumbnail: img3, // Using an image as thumbnail
-    videoUrl: "/src/assets/gallery/video2.mp4",
+    videoUrl: video2,
   },
   {
     id: 3,
     title: "Treasure Hunt (School)",
     thumbnail: img2, // Using an image as thumbnail
-    videoUrl: "/src/assets/gallery/video3.mp4",
+    videoUrl: video3,
   },
 ]
 
