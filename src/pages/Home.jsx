@@ -139,7 +139,7 @@ const Home = () => {
               {/* Event Badge */}
               <div className="inline-block mb-6 px-4 py-2 rounded-full bg-primary/20 dark:bg-primary/30 backdrop-blur-sm border border-primary/30 dark:border-primary/50">
                 <span className="text-sm font-medium text-gray-900 dark:text-white">
-                  Annual Technical Event 2024
+                  Annual Technical Event 2025
                 </span>
               </div>
 
