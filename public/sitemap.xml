@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://aiitpevent.in/</loc>
+    <loc>https://www.aiitpevent.in/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://aiitpevent.in/events</loc>
+    <loc>https://www.aiitpevent.in/events</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -25,7 +25,19 @@
     </image:image>
   </url>
   <url>
-    <loc>https://aiitpevent.in/about</loc>
+    <loc>https://www.aiitpevent.in/about</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.aiitpevent.in/contact</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aiitpevent.in/gallery</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -36,7 +48,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://aiitpevent.in/contact</loc>
+    <loc>https://www.aiitpevent.in/leadership</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
