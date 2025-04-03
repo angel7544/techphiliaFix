@@ -17,16 +17,16 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=100083105208389" className="text-white hover:text-secondary transition-colors">
-                <Facebook size={20} />
+                <Facebook className="w-5 h-5 text-white hover:text-secondary transition-colors" />
               </a>
               <a href="https://www.instagram.com/amityuniversitypatna/" className="text-white hover:text-secondary transition-colors">
-                <Instagram size={20} />
+                <Instagram className="w-5 h-5 text-white hover:text-secondary transition-colors" />
               </a>
               <a href="https://x.com/amity_patna?t=6-3sCQxmfHyThTcf3h4riQ&s=09" className="text-white hover:text-secondary transition-colors">
-                <Twitter size={20} />
+                <Twitter className="w-5 h-5 text-white hover:text-secondary transition-colors" />
               </a>
               <a href="https://www.linkedin.com/school/amity-university-patna/" className="text-white hover:text-secondary transition-colors">
-                <Linkedin size={20} />
+                <Linkedin className="w-5 h-5 text-white hover:text-secondary transition-colors" />
               </a>
             </div>
           </div>
