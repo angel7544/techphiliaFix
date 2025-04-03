@@ -110,7 +110,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="John Doe"
+                    placeholder="Hardik Soni"
                   />
                 </div>
 
@@ -126,7 +126,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 9661850789"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="john@example.com"
+                    placeholder="hardiksoni019@gmail.com"
                   />
                 </div>
 
