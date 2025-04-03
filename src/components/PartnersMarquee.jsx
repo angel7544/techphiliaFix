@@ -4,11 +4,12 @@ import internNexus from "../assets/partners/nexus.png"
 import PizzaHut from "../assets/partners/pizzahut.png"
 import gdg from "../assets/partners/gdg.png"
 import Amalfi from "../assets/partners/amalfi.png"
+import urbanOasis from "../assets/partners/urban.png"
 
 const partners = [
   { id: 1, name: "InternNexus", logo: internNexus},
   { id: 2, name: "PizzaHut", logo: PizzaHut },
-  { id: 3, name: "Urban Oasis", logo: placeholderLogo },
+  { id: 3, name: "Urban Oasis", logo: urbanOasis },
   { id: 4, name: "GDG Patna", logo: gdg },
   { id: 5, name: "Amalfi Grand Patna", logo: Amalfi },
 
