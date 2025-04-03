@@ -1046,7 +1046,7 @@ const Events = () => {
                       href={event.registrationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="premium-button text-center flex items-center justify-center"
+                      className="premium-button hover:text-white text-center flex items-center justify-center"
                     >
                       Register
                     </a>
@@ -1192,7 +1192,7 @@ const Events = () => {
                   href={selectedEvent.registrationUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="premium-button"
+                  className="premium-button hover:text-white"
                 >
                   Register Now
                 </a>
