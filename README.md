@@ -110,6 +110,15 @@ techphilia/
       <br />
       <sub>Developer</sub>
     </td>
+    <td align="center">
+      <a href="https://github.com/JRshubhu12">
+        <img src="https://avatars.githubusercontent.com/JRshubhu12" width="100px;" alt="Shubham Choudhary"/>
+        <br />
+        <sub><b>Shubham Choudhary</b></sub>
+      </a>
+      <br />
+      <sub>Full Stack MERN Developer</sub>
+    </td>
   </tr>
 </table>
 
