@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Calendar, Clock, MapPin, Search, X, Phone, User, Grid, Layout } from "lucide-react"
+import { Calendar, Clock, MapPin, Search, X, Phone, User } from "lucide-react"
 import placeholderImage from "../assets/placeholder.svg"
 import SEO from "../components/SEO"
 
@@ -14,7 +14,7 @@ const eventsData = [
     description: "Hands-on learning experience with industry experts",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "11:00 AM - 5:30 PM",
+    time: "11:00 AM - 4:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Learning",
     day: "21",
@@ -49,16 +49,16 @@ const eventsData = [
     ],
     studentCoordinators: [
       {
-        name: "Abhinav Raj",
-        phone: "8404921703",
+        name: "Satyam Anand",
+        phone: "7909059422",
       },
       {
         name: "Harsh Singh",
         phone: "8863035698",
       },
       {
-        name: "Dev Pratap Lal",
-        phone: "9852158117",
+        name: "Naincy kushwaha ",
+        phone: "9279454588",
       },
     ],
   },
@@ -110,7 +110,7 @@ const eventsData = [
       "Website Designing: - Supported by Google Developer Groups Patna",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "3:00 PM - 5:00 PM",
+    time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Design",
     day: "21",
@@ -119,7 +119,7 @@ const eventsData = [
       "Participants will compete individually.",
       "Participants must design a fully functional social media website where the website should have features including User Registration & Login Profile Page, Post Creation (Text/Image), Like/Comment Feature and Responsive Design.",
       "Backend Development - Participants will implement a backend with a database (e.g., MySQL, Firebase, MongoDB) for storing user data.",
-      "- Use of *no-code/low-code platforms* is allowed but may receive fewer points than fully coded projects.",
+      "Use of *no-code/low-code platforms* is allowed but may receive fewer points than fully coded projects.",
       "Participants must submit their project via live link before the deadline.",
       "Judging Criteria will include UI/UX Design (30%) – Clean, interactive, and user-friendly interface, Functionality (25%) – Working features like login, post creation, and engagement, Creativity & Innovation (20%) – Unique ideas and additional features, Backend Implementation (15%) – Proper database and server-side logic (bonus marks), Responsiveness & Optimization (10%) – Mobile-friendly and smooth performance.",
       "No use of pre-built website templates (Bootstrap templates or WordPress themes are not allowed) and AI-generated code is allowed but must be properly modified and implemented.",
@@ -138,12 +138,12 @@ const eventsData = [
     ],
     studentCoordinators: [
       {
-        name: "Om Prakash",
-        phone: "9523173538",
-      },
-      {
         name: "Ashutosh Kumar",
         phone: "7004246315",
+      },
+      {
+        name: "Angel ",
+        phone: "9135893002",
       },
     ],
   },
@@ -180,12 +180,12 @@ const eventsData = [
     ],
     studentCoordinators: [
       {
-        name: "Nikhil Ranjan",
-        phone: "9576427354",
+        name: "Om Prakash",
+        phone: "9523173538",
       },
       {
-        name: "Satyam Anand",
-        phone: "7909059422",
+        name: "Abhinav Raj",
+        phone: "8404921703",
       },
     ],
   },
@@ -196,7 +196,7 @@ const eventsData = [
       "Narrate your tech journey and innovations through storytelling",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "3:00 PM - 5:00 PM",
+    time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Presentation",
     day: "21",
@@ -241,7 +241,7 @@ const eventsData = [
       "Theme: - Street Vibes, Video Making Competition (Online Submission)",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "11:00 AM - 5:00 PM",
+    time: "10:00 AM - 11:00 AM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Photography",
     day: "21",
@@ -274,8 +274,8 @@ const eventsData = [
         phone: "8210430216",
       },
       {
-        name: "Aditi Sinha",
-        phone: "9264222419",
+        name: "Mayank Kumar",
+        phone: "6207603715",
       },
     ],
   },
@@ -312,8 +312,8 @@ const eventsData = [
         phone: "9631730832",
       },
       {
-        name: "Sujit Sagar",
-        phone: "6299656482",
+        name: "Monika Arya",
+        phone: "7870883933",
       },
     ],
   },
@@ -323,7 +323,7 @@ const eventsData = [
     description: "Test your knowledge on the latest technology trends",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "11:00 AM - 1:30 PM",
+    time: "11:00 PM - 1:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
     category: "Quiz",
     day: "21",
@@ -432,7 +432,7 @@ const eventsData = [
     description: "Exciting treasure hunt for school students with tech clues",
     image: placeholderImage,
     date: "April 21, 2025",
-    time: "11:00 AM - 1:00 PM",
+    time: "11:00 AM - 12:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Game",
     day: "21",
@@ -445,9 +445,6 @@ const eventsData = [
       "No use of mobile phones, internet, or external help unless explicitly allowed.",
       "The first team to solve all clues and reach the final treasure wins. If no team finds the treasure within the time limit, the team closest to the finish wins.",
       "The team that finds the treasure first or completes the most clues in the least time wins.",
-      "Teams of 3-4 members from same school",
-      "Age group: 14-18 years",
-      "School ID cards mandatory",
     ],
     facultyCoordinators: [
       {
@@ -457,12 +454,12 @@ const eventsData = [
     ],
     studentCoordinators: [
       {
-        name: "Vishal Prakash",
-        phone: "9798751083",
+        name: "Ankit Kumar",
+        phone: "9534439001",
       },
       {
-        name: "Ravi Ranjan",
-        phone: "7061231387",
+        name: "Shivendu Kumar",
+        phone: "7909022881",
       },
     ],
   },
@@ -470,14 +467,15 @@ const eventsData = [
   // 22 April 2025 Events
   {
     id: 11,
-    title: "Hackathon",
-    description:
-      "Theme: - Digital Earth: Smart Solutions for a Sustainable World",
+
+    title: "Hackathon (University)",
+    description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
+
     image: placeholderImage,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna",
-    category: "Coding",
+    category: "Hackathon",
     day: "22",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
@@ -571,11 +569,13 @@ const eventsData = [
     description:
       "Advanced treasure hunt for university students with technical challenges",
     image: placeholderImage,
-    date: "April 22, 2025",
+    date: "April 23, 2025",
     time: "9:00 AM - 10:00 AM",
-    venue: ": ShriKrishna Science Centre, Gandhi Maidan, Patna.",
+    venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Game",
+    day: "23",
     day: "22",
+
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each team should consist of 3 to 5 members.",
@@ -585,10 +585,6 @@ const eventsData = [
       "No use of mobile phones, internet, or external help unless explicitly allowed.",
       "The first team to solve all clues and reach the final treasure wins. If no team finds the treasure within the time limit, the team closest to the finish wins.",
       "The team that finds the treasure first or completes the most clues in the least time wins.",
-      "Teams of 3-4 members",
-      "College ID cards mandatory",
-      "Clues will involve technical problem-solving",
-      "QR codes and AR elements will be used",
     ],
     facultyCoordinators: [
       {
@@ -631,8 +627,6 @@ const eventsData = [
       "Decision of the judges will be final and binding.",
       "All costumes are permitted, which maintain decency including original costumes & fashion designs.",
       "Purchased, professionally made, or rented costumes are permitted",
-      "Age group: 14-18 years",
-      "Theme: 'Future Tech Fashion'",
     ],
     facultyCoordinators: [
       {
@@ -674,7 +668,7 @@ const eventsData = [
     image: placeholderImage,
     date: "April 23, 2025",
     time: "11:00 AM - 2:00 PM",
-    venue: "Amity University, Rupaspur Campus, Patna.",
+    venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Fashion",
     day: "23",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
@@ -689,8 +683,6 @@ const eventsData = [
       "Decision of the judges will be final and binding.",
       "All costumes are permitted, which maintain decency including original costumes & fashion designs.",
       "Purchased, professionally made, or rented costumes are permitted",
-      "Theme: 'Wearable Technology of 2050'",
-      "At least 3 outfits must have functional tech elements",
     ],
     facultyCoordinators: [
       {
@@ -725,7 +717,70 @@ const eventsData = [
       },
     ],
   },
-];
+
+  {
+    id: 16,
+    title: "Hackathon (School)",
+    description: "Theme: - Innovate for Earth",
+    image: placeholderImage,
+    date: "April 22, 2025",
+    time: "10:00 AM - 6:00 PM",
+    venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
+    category: "Hackathon",
+    day: "23",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
+    rules: [
+      "Date: April 22 (World Earth Day)",
+      "•	Duration: 8 hours",
+      "•	Target Audience: School students (middle & high school)",
+      "•	Team Size: 2-4 members per team",
+      "•	Mode: On the Spot",
+      "•	Team Size: 2-4 members per team",
+      "   Problem Statements (Example Topics)",
+      "1.	Eco-friendly Transportation – Create a solution to promote cycling, carpooling, or public transport.",
+      "2.	Waste Management – Build a solution to help users segregate & recycle waste effectively.",
+      "3.	Water Conservation – Develop a smart system to track and reduce water usage.",
+      "4.	Air Pollution Monitoring – Design an AI-based tool to analyse air quality.",
+      "5.	Green Energy Awareness – Gamify learning about solar, wind, and other renewable energy sources.",
+      "   Judging Criteria",
+      "•	Innovation & Creativity (30%) – Uniqueness of the idea",
+      "•	Technical Implementation (30%) – How well the solution is developed",
+      "•	Impact on Environment (20%) – Potential real-world benefits",
+      "•	Presentation & Pitch (20%) – Clarity and effectiveness of explanation",
+      "   Prizes & Recognition",
+      "•	Winner: Cash Prize + Certificate",
+      "•	Runner-up: Gift Voucher + Certificate",
+      "•	Participation certificates for all",
+    ],
+    facultyCoordinators: [
+      {
+        name: "Dr Naveen Kumar",
+        phone: "8807123596",
+      },
+      {
+        name: "Mr S.S Dwivedi",
+        phone: "8787062033",
+      },
+    ],
+    studentCoordinators: [
+      {
+        name: "Nikhil Ranjan",
+        phone: "9576427354",
+      },
+      {
+        name: "Arrav Pulkit",
+        phone: "8936040289",
+      },
+      {
+        name: "Hariom Sharnam",
+        phone: "8539826023",
+      },
+    ],
+  },
+]
+
+
+
 
 const Events = () => {
   const [activeFilter, setActiveFilter] = useState("all")
@@ -812,304 +867,337 @@ const Events = () => {
     <>
       <SEO
         title="Events"
-        description="Explore our exciting lineup of technical competitions, workshops, and activities scheduled for TECHPHILIA 8.0. This website developed by Ayush, Aman Verma and Shubham Choudhary"
-        keywords="techphilia events, hackathon, coding competition, tech quiz, treasure hunt, tech workshops"
-        url="/events"
+        description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
+        keywords="techphilia events, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
+        image="https://www.aiitpevent.in/#/events-og-image.png"
+        url="https://www.aiitpevent.in/#/events"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": eventsData.map((event, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Event",
+              "name": event.title,
+              "description": event.description,
+              "startDate": `2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "T")}+05:30`,
+              "endDate": `2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "T")}+05:30`,
+              "location": {
+                "@type": "Place",
+                "name": event.venue,
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Rupaspur",
+                  "addressLocality": "Patna",
+                  "addressRegion": "Bihar",
+                  "postalCode": "800001",
+                  "addressCountry": "IN"
+                }
+              },
+              "image": event.image,
+              "offers": {
+                "@type": "Offer",
+                "url": event.registrationUrl,
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          }))
+        }}
       />
-    <div className="py-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-primary mb-2 text-center">Events</h1>
-        <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-        Explore our exciting lineup of technical competitions, workshops, and activities scheduled for TECHPHILIA
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-primary mb-2 text-center">Events</h1>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Explore our exciting lineup of technical competitions, workshops, and activities scheduled for TECHPHILIA
             8.0.
-        </p>
+          </p>
 
-        {/* Search Bar */}
-        <div className="max-w-md mx-auto mb-8">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search events..."
-              value={searchQuery}
-              onChange={handleSearchChange}
-              className="w-full px-4 py-2 pl-10 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm"
-            />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
-            {searchQuery && (
-              <button
-                onClick={clearSearch}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                aria-label="Clear search"
-              >
-                <X size={18} />
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Date Filters */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-md shadow-sm bg-white">
-            <button
-              onClick={() => setActiveFilter("all")}
-              className={`px-4 py-2 text-sm font-medium rounded-l-md border ${
-                activeFilter === "all"
-                  ? "bg-primary text-white border-primary"
-                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              All Events
-            </button>
-            <button
-              onClick={() => setActiveFilter("21")}
-              className={`px-4 py-2 text-sm font-medium border-t border-b ${
-                activeFilter === "21"
-                  ? "bg-primary text-white border-primary"
-                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              21 April
-            </button>
-            <button
-              onClick={() => setActiveFilter("22")}
-              className={`px-4 py-2 text-sm font-medium border-t border-b ${
-                activeFilter === "22"
-                  ? "bg-primary text-white border-primary"
-                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              22 April
-            </button>
-            <button
-              onClick={() => setActiveFilter("23")}
-              className={`px-4 py-2 text-sm font-medium rounded-r-md border ${
-                activeFilter === "23"
-                  ? "bg-primary text-white border-primary"
-                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
-              }`}
-            >
-              23 April
-            </button>
-          </div>
-        </div>
-
-        {/* No Results Message */}
-        {filteredEvents.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <Search size={48} className="mx-auto" />
+          {/* Search Bar */}
+          <div className="max-w-md mx-auto mb-8">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search events..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                className="w-full px-4 py-2 pl-10 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm"
+              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+              {searchQuery && (
+                <button
+                  onClick={clearSearch}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  aria-label="Clear search"
+                >
+                  <X size={18} />
+                </button>
+              )}
             </div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">No events found</h3>
-            <p className="text-gray-500">Try adjusting your search or filter to find what you're looking for.</p>
-            {searchQuery && (
+          </div>
+
+          {/* Date Filters */}
+          <div className="flex justify-center mb-10">
+            <div className="inline-flex rounded-md shadow-sm bg-white">
               <button
-                onClick={clearSearch}
-                className="mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+                onClick={() => setActiveFilter("all")}
+                className={`px-4 py-2 text-sm font-medium rounded-l-md border ${activeFilter === "all"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                  }`}
               >
-                Clear Search
+                All Events
               </button>
-            )}
+              <button
+                onClick={() => setActiveFilter("21")}
+                className={`px-4 py-2 text-sm font-medium border-t border-b ${activeFilter === "21"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                  }`}
+              >
+                21 April
+              </button>
+              <button
+                onClick={() => setActiveFilter("22")}
+                className={`px-4 py-2 text-sm font-medium border-t border-b ${activeFilter === "22"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                  }`}
+              >
+                22 April
+              </button>
+              <button
+                onClick={() => setActiveFilter("23")}
+                className={`px-4 py-2 text-sm font-medium rounded-r-md border ${activeFilter === "23"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                  }`}
+              >
+                23 April
+              </button>
+            </div>
+          </div>
+
+          {/* No Results Message */}
+          {filteredEvents.length === 0 && (
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <Search size={48} className="mx-auto" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">No events found</h3>
+              <p className="text-gray-500">Try adjusting your search or filter to find what you're looking for.</p>
+              {searchQuery && (
+                <button
+                  onClick={clearSearch}
+                  className="mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+                >
+                  Clear Search
+                </button>
+              )}
+            </div>
+          )}
+
+          {/* Events Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredEvents.map((event) => (
+              <div key={event.id} className="premium-card group">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={event.image || "/placeholder.svg"}
+                    alt={event.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-0 right-0 bg-secondary text-white font-bold py-1 px-3 rounded-bl-md">
+                    {event.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary mb-2">{event.title}</h3>
+                  <p className="text-gray-600 mb-4">{event.description}</p>
+                  <div className="space-y-2 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      <Calendar size={16} className="mr-2 text-secondary" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock size={16} className="mr-2 text-secondary" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin size={16} className="mr-2 text-secondary" />
+                      <span>{event.venue}</span>
+                    </div>
+                  </div>
+                  {/* Updated buttons */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <button
+                      onClick={() => openInfoModal(event)}
+                      className="bg-white border border-primary text-primary hover:bg-primary/5 py-2 px-4 rounded-md transition-colors font-medium"
+                    >
+                      Info
+                    </button>
+                    <a
+                      href={event.registrationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="premium-button hover:text-white text-center flex items-center justify-center"
+                    >
+                      Register
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Info Modal */}
+        {isModalOpen && selectedEvent && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 modal-overlay"
+            onClick={handleOutsideClick}
+          >
+            <div
+              className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="p-6 border-b border-gray-200">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-2xl font-bold text-primary">{selectedEvent.title}</h3>
+                  <button
+                    onClick={closeModal}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                    aria-label="Close modal"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
+                <div className="mt-2 text-sm text-gray-500">
+                  <span className="inline-block bg-secondary text-white px-2 py-1 rounded-md">
+                    {selectedEvent.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Modal Body */}
+              <div className="p-6">
+                {/* Rules Section */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-primary mb-3">Rules & Guidelines</h4>
+                  <ul className="list-disc pl-5 space-y-2">
+                    {selectedEvent.rules.map((rule, index) => (
+                      <li key={index} className={`text-gray-700 ${rule === "" ? "list-none" : ""}`}>
+                        {rule}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Coordinators Section */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {/* Faculty Coordinators */}
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-primary mb-3">Faculty Coordinators</h4>
+                    {selectedEvent.facultyCoordinators ? (
+                      // For events with multiple faculty coordinators
+                      <div className="space-y-4">
+                        {selectedEvent.facultyCoordinators.map((coordinator, index) => (
+                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
+                            <div className="flex items-center mb-1">
+                              <User size={16} className="mr-2 text-secondary" />
+                              <span className="text-gray-700">{coordinator.name}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Phone size={16} className="mr-2 text-secondary" />
+                              <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
+                                {coordinator.phone}
+                              </a>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      // For events with a single faculty coordinator
+                      <>
+                        <div className="flex items-center mb-2">
+                          <User size={16} className="mr-2 text-secondary" />
+                          <span className="text-gray-700">{selectedEvent.facultyCoordinator.name}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Phone size={16} className="mr-2 text-secondary" />
+                          <a
+                            href={`tel:${selectedEvent.facultyCoordinator.phone}`}
+                            className="text-primary hover:underline"
+                          >
+                            {selectedEvent.facultyCoordinator.phone}
+                          </a>
+                        </div>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Student Coordinators */}
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="text-lg font-semibold text-primary mb-3">Student Coordinators</h4>
+                    {selectedEvent.studentCoordinators ? (
+                      // For events with multiple student coordinators
+                      <div className="space-y-4">
+                        {selectedEvent.studentCoordinators.map((coordinator, index) => (
+                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
+                            <div className="flex items-center mb-1">
+                              <User size={16} className="mr-2 text-secondary" />
+                              <span className="text-gray-700">{coordinator.name}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <Phone size={16} className="mr-2 text-secondary" />
+                              <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
+                                {coordinator.phone}
+                              </a>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      // For events with a single student coordinator
+                      <>
+                        <div className="flex items-center mb-2">
+                          <User size={16} className="mr-2 text-secondary" />
+                          <span className="text-gray-700">{selectedEvent.studentCoordinator.name}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Phone size={16} className="mr-2 text-secondary" />
+                          <a
+                            href={`tel:${selectedEvent.studentCoordinator.phone}`}
+                            className="text-primary hover:underline"
+                          >
+                            {selectedEvent.studentCoordinator.phone}
+                          </a>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-6 border-t border-gray-200 flex justify-end">
+                <a
+                  href={selectedEvent.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="premium-button hover:text-white"
+                >
+                  Register Now
+                </a>
+              </div>
+            </div>
           </div>
         )}
-
-        {/* Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event) => (
-            <div key={event.id} className="premium-card group">
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={event.image || "/placeholder.svg"}
-                  alt={event.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-0 right-0 bg-secondary text-primary font-bold py-1 px-3 rounded-bl-md">
-                  {event.category}
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2">{event.title}</h3>
-                <p className="text-gray-600 mb-4">{event.description}</p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <Calendar size={16} className="mr-2 text-secondary" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock size={16} className="mr-2 text-secondary" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin size={16} className="mr-2 text-secondary" />
-                    <span>{event.venue}</span>
-                  </div>
-                </div>
-                {/* Updated buttons */}
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <button
-                    onClick={() => openInfoModal(event)}
-                    className="bg-white border border-primary text-primary hover:bg-primary/5 py-2 px-4 rounded-md transition-colors font-medium"
-                  >
-                    Info
-                  </button>
-                  <a
-                    href={event.registrationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="premium-button text-center flex items-center justify-center"
-                  >
-                    Register
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
-
-      {/* Info Modal */}
-      {isModalOpen && selectedEvent && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 modal-overlay"
-          onClick={handleOutsideClick}
-        >
-          <div
-            className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Header */}
-            <div className="p-6 border-b border-gray-200">
-              <div className="flex justify-between items-center">
-                <h3 className="text-2xl font-bold text-primary">{selectedEvent.title}</h3>
-                <button
-                  onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                  aria-label="Close modal"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-              <div className="mt-2 text-sm text-gray-500">
-                <span className="inline-block bg-secondary text-primary px-2 py-1 rounded-md">
-                  {selectedEvent.category}
-                </span>
-              </div>
-            </div>
-
-            {/* Modal Body */}
-            <div className="p-6">
-              {/* Rules Section */}
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-primary mb-3">Rules & Guidelines</h4>
-                <ul className="list-disc pl-5 space-y-2">
-                  {selectedEvent.rules.map((rule, index) => (
-                    <li key={index} className={`text-gray-700 ${rule === "" ? "list-none" : ""}`}>
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Coordinators Section */}
-              <div className="grid md:grid-cols-2 gap-4">
-                {/* Faculty Coordinators */}
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-primary mb-3">Faculty Coordinators</h4>
-                  {selectedEvent.facultyCoordinators ? (
-                    // For events with multiple faculty coordinators
-                    <div className="space-y-4">
-                      {selectedEvent.facultyCoordinators.map((coordinator, index) => (
-                        <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
-                          <div className="flex items-center mb-1">
-                            <User size={16} className="mr-2 text-secondary" />
-                            <span className="text-gray-700">{coordinator.name}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Phone size={16} className="mr-2 text-secondary" />
-                            <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
-                              {coordinator.phone}
-                            </a>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    // For events with a single faculty coordinator
-                    <>
-                      <div className="flex items-center mb-2">
-                        <User size={16} className="mr-2 text-secondary" />
-                        <span className="text-gray-700">{selectedEvent.facultyCoordinator.name}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone size={16} className="mr-2 text-secondary" />
-                        <a
-                          href={`tel:${selectedEvent.facultyCoordinator.phone}`}
-                          className="text-primary hover:underline"
-                        >
-                          {selectedEvent.facultyCoordinator.phone}
-                        </a>
-                      </div>
-                    </>
-                  )}
-                </div>
-
-                {/* Student Coordinators */}
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-primary mb-3">Student Coordinators</h4>
-                  {selectedEvent.studentCoordinators ? (
-                    // For events with multiple student coordinators
-                    <div className="space-y-4">
-                      {selectedEvent.studentCoordinators.map((coordinator, index) => (
-                        <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
-                          <div className="flex items-center mb-1">
-                            <User size={16} className="mr-2 text-secondary" />
-                            <span className="text-gray-700">{coordinator.name}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Phone size={16} className="mr-2 text-secondary" />
-                            <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
-                              {coordinator.phone}
-                            </a>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    // For events with a single student coordinator
-                    <>
-                      <div className="flex items-center mb-2">
-                        <User size={16} className="mr-2 text-secondary" />
-                        <span className="text-gray-700">{selectedEvent.studentCoordinator.name}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone size={16} className="mr-2 text-secondary" />
-                        <a
-                          href={`tel:${selectedEvent.studentCoordinator.phone}`}
-                          className="text-primary hover:underline"
-                        >
-                          {selectedEvent.studentCoordinator.phone}
-                        </a>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Modal Footer */}
-            <div className="p-6 border-t border-gray-200 flex justify-end">
-              <a
-                href={selectedEvent.registrationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="premium-button"
-              >
-                Register Now
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
     </>
   )
 }
