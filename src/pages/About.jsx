@@ -56,8 +56,8 @@ const About = () => {
         title="About"
         description="Learn about Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="about techphilia, amity university patna technical fest, techphilia team, technical festival organizers, amity university patna events, techphilia history, technical fest about us"
-        image="https://www.aiitpevent.in/#/about-og-image.png"
-        url="https://www.aiitpevent.in/#/about"
+        image="https://www.aiitpevent.in/about-og-image.png"
+        url="https://www.aiitpevent.in/about"
         type="website"
         structuredData={{
           "@context": "https://schema.org",

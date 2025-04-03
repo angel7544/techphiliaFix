@@ -726,7 +726,7 @@ const eventsData = [
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Hackathon",
-    day: "23",
+    day: "22",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Date: April 22 (World Earth Day)",
@@ -868,8 +868,8 @@ const Events = () => {
         title="Events"
         description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="techphilia events, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
-        image="https://www.aiitpevent.in/#/events-og-image.png"
-        url="https://www.aiitpevent.in/#/events"
+        image="https://www.aiitpevent.in/events-og-image.png"
+        url="https://www.aiitpevent.in/events"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
