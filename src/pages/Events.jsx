@@ -574,7 +574,6 @@ const eventsData = [
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Game",
     day: "23",
-    day: "22",
 
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
