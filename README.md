@@ -45,7 +45,7 @@ You can also run this application using Docker:
 
 ```bash
 docker pull ashukr321/techphilia
-docker run -p 3000:3000 ashukr321/techphilia
+docker run -p 5173:5173 ashukr321/techphilia
 ```
 
 Check out our Docker Hub repository: [ashukr321/techphilia](https://hub.docker.com/u/ashukr321)
