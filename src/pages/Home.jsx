@@ -152,7 +152,7 @@ const Home = () => {
     <>
       <SEO
         title="Home"
-        description="Techphilia 8.0 - The Annual Technical Extravaganza at Amity University Patna. Experience cutting-edge competitions, workshops, hackathons, and tech events. Join us from 21st to 23rd April 2025."
+        description="Techphilia 8.0 - The Annual Technical Extravaganza at Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="techphilia, technical fest, amity university patna, hackathon, coding competition, tech events, technical teams, technology festival, tech workshops, student competitions, bihar tech fest, engineering events"
         image="https://aiitpevent.in/og-image.png"
         url="https://aiitpevent.in/"
