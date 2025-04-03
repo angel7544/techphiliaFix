@@ -128,8 +128,8 @@ const Home = () => {
         streetAddress: "Rupaspur",
         addressLocality: "Patna",
         addressRegion: "Bihar",
-        postalCode: "800001",\
-        addressCountry": "IN",
+        postalCode: "800001",
+        addressCountry: "IN",
       },
     },
     image: ["https://aiitpevent.in/logo.png"],
