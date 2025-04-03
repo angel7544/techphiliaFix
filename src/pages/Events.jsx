@@ -470,15 +470,12 @@ const eventsData = [
 
     title: "Hackathon (University)",
     description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
-    title: "Hackathon",
-    description:
-      "Theme: - Digital Earth: Smart Solutions for a Sustainable World",
 
     image: placeholderImage,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna",
-    category: "Coding",
+    category: "Hackathon",
     day: "22",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
@@ -574,7 +571,7 @@ const eventsData = [
     image: placeholderImage,
     date: "April 23, 2025",
     time: "9:00 AM - 10:00 AM",
-    venue: ": ShriKrishna Science Centre, Gandhi Maidan, Patna.",
+    venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Game",
     day: "23",
     day: "22",
@@ -729,7 +726,7 @@ const eventsData = [
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
-    category: "Fashion",
+    category: "Hackathon",
     day: "23",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
@@ -870,7 +867,7 @@ const Events = () => {
     <>
       <SEO
         title="Events"
-        description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Discover workshops, competitions, and tech events from 21st to 23rd April 2025."
+        description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="techphilia events, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
         image="https://www.aiitpevent.in/#/events-og-image.png"
         url="https://www.aiitpevent.in/#/events"

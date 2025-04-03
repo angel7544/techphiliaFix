@@ -118,7 +118,7 @@ const Home = () => {
     "@type": "Event",
     name: "Techphilia 8.0",
     description:
-      "Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary",
+      "Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary.",
     startDate: "2025-04-21T09:00:00+05:30",
     endDate: "2025-04-23T18:00:00+05:30",
     location: {

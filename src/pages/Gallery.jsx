@@ -53,10 +53,10 @@ const Gallery = () => {
     <>
       <SEO
         title="Gallery"
-        description="Explore the visual journey of Techphilia 8.0 through our photo gallery. View moments from workshops, competitions, and celebrations at Amity University Patna's technical festival."
+        description="Explore the visual journey of Techphilia 8.0 through our photo gallery. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="techphilia gallery, amity university patna photos, technical fest pictures, techphilia event photos, workshop images, competition photos, tech festival gallery, amity university patna event gallery"
-        image="https://aiitpevent.in/gallery-og-image.png"
-        url="https://aiitpevent.in/gallery"
+        image="https://www.aiitpevent.in/#/gallery-og-image.png"
+        url="https://www.aiitpevent.in/#/gallery"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
