@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import img1 from "../assets/gallery/img1.jpg"
 import img2 from "../assets/gallery/img2.jpg"
 import img3 from "../assets/gallery/img3.jpg"
@@ -19,7 +19,7 @@ import video1 from "../assets/gallery/video1.mp4"
 import video2 from "../assets/gallery/video2.mp4"
 import video3 from "../assets/gallery/video3.mp4"
 import SEO from "../components/SEO"
-import { Play } from "lucide-react"
+import { Play, X } from "lucide-react"
 
 // Sample gallery data - reduced to 14 images
 const galleryImages = [
@@ -46,7 +46,6 @@ const galleryVideos = [
     title: "Amivogue (University)",
     thumbnail: img1, // Using an image as thumbnail
     videoUrl: video1, // Replace with actual video URL
-    
   },
   {
     id: 2,
@@ -65,6 +64,24 @@ const galleryVideos = [
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("all")
   const [selectedVideo, setSelectedVideo] = useState(null)
+  const videoRef = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const [isTablet, setIsTablet] = useState(false)
+
+  // Check device type on mount and window resize
+  useEffect(() => {
+    const checkDeviceType = () => {
+      setIsMobile(window.innerWidth < 640)
+      setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024)
+    }
+
+    checkDeviceType()
+    window.addEventListener("resize", checkDeviceType)
+
+    return () => {
+      window.removeEventListener("resize", checkDeviceType)
+    }
+  }, [])
 
   // Function to open video modal
   const openVideoModal = (video) => {
@@ -74,9 +91,21 @@ const Gallery = () => {
 
   // Function to close video modal
   const closeVideoModal = () => {
+    if (videoRef.current) {
+      videoRef.current.pause()
+    }
     setSelectedVideo(null)
     document.body.style.overflow = "auto" // Re-enable scrolling
   }
+
+  // Effect to play video when modal opens
+  useEffect(() => {
+    if (selectedVideo && videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Error playing video:", error)
+      })
+    }
+  }, [selectedVideo])
 
   // Filter content based on active tab
   const filteredContent = () => {
@@ -179,6 +208,17 @@ const Gallery = () => {
     }
   }
 
+  // Get video container height based on device
+  const getVideoContainerClass = () => {
+    if (isMobile) {
+      return "h-[70vh]" // 70% of viewport height on mobile
+    } else if (isTablet) {
+      return "h-[80vh]" // 80% of viewport height on tablets
+    } else {
+      return "h-[85vh]" // 85% of viewport height on desktop
+    }
+  }
+
   return (
     <>
       <SEO
@@ -251,27 +291,32 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Video Modal - Responsive height */}
       {selectedVideo && (
-        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeVideoModal}>
-          <div className="bg-white rounded-lg w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <div className="p-4 border-b flex justify-between items-center">
-              <h3 className="font-bold text-lg">{selectedVideo.title}</h3>
-              <button onClick={closeVideoModal} className="text-gray-500 hover:text-gray-700">
-                ✕
-              </button>
-            </div>
-            <div className="aspect-video w-full">
-              <iframe
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={closeVideoModal}>
+          <div className="relative w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+            {/* Close button positioned in the corner */}
+            <button
+              onClick={closeVideoModal}
+              className="absolute top-2 right-2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+              aria-label="Close video"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Video container with responsive height */}
+            <div
+              className={`w-full rounded-lg overflow-hidden flex items-center justify-center ${getVideoContainerClass()}`}
+            >
+              <video
+                ref={videoRef}
                 src={selectedVideo.videoUrl}
-                title={selectedVideo.title}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="p-4">
-              <p className="text-gray-700">{selectedVideo.description}</p>
+                className="max-h-full max-w-full object-contain"
+                controls
+                playsInline
+                controlsList="nodownload"
+                poster={selectedVideo.thumbnail}
+              />
             </div>
           </div>
         </div>
