@@ -3,8 +3,8 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.aiitpevent.in/</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://aiitpevent.in/</loc>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,8 +14,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.aiitpevent.in/events</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://aiitpevent.in/events</loc>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -25,20 +25,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.aiitpevent.in/about</loc>
-    <lastmod>2025-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.aiitpevent.in/contact</loc>
-    <lastmod>2025-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.aiitpevent.in/gallery</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://aiitpevent.in/gallery</loc>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -48,8 +36,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.aiitpevent.in/leadership</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://aiitpevent.in/leadership</loc>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -59,26 +47,16 @@
     </image:image>
   </url>
   <url>
-    <loc>https://aiitpevent.in/gallery</loc>
-    <lastmod>2025-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://aiitpevent.in/images/gallery-banner.jpg</image:loc>
-      <image:title>Techphilia 8.0 Gallery</image:title>
-      <image:caption>View moments from previous editions</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://aiitpevent.in/leadership</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://aiitpevent.in/about</loc>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://aiitpevent.in/images/leadership-banner.jpg</image:loc>
-      <image:title>Techphilia 8.0 Leadership</image:title>
-      <image:caption>Meet the team behind Techphilia</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://aiitpevent.in/contact</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
 

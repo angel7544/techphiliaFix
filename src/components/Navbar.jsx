@@ -154,7 +154,10 @@ const Navbar = () => {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? 
+              <X className="w-6 h-6 text-primary hover:text-secondary transition-colors" /> : 
+              <Menu className="w-6 h-6 text-primary hover:text-secondary transition-colors" />
+            }
           </button>
         </div>
 
