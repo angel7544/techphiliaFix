@@ -5,10 +5,10 @@ const Leadership = () => {
     <>
       <SEO
         title="Leadership"
-        description="Meet the distinguished leadership team behind Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Learn about our mentors, organizers, and the visionaries guiding this premier technical event."
+        description="Meet the distinguished leadership team behind Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="techphilia leadership, amity university patna leadership, technical fest organizers, techphilia mentors, amity university patna faculty, technical festival team, event leadership team"
-        image="https://aiitpevent.in/leadership-og-image.png"
-        url="https://aiitpevent.in/leadership"
+        image="https://www.aiitpevent.in/#/leadership-og-image.png"
+        url="https://www.aiitpevent.in/#/leadership"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
