@@ -232,7 +232,7 @@ const Home = () => {
               </div>
               <div className="text-gray-700 font-semibold">KEY POINTS:</div>
               <div className="text-gray-700">
-                TECHPHILIA ATTRACTION: MR. AND MRS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MRS.
+                TECHPHILIA ATTRACTION: MR. AND MS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MS.
                 TECHPHILA 8.0.
               </div>
               <div className="text-gray-700">
