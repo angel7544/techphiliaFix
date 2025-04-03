@@ -1,4 +1,3 @@
-
 import gallery1 from "../assets/gallery/gallery1.jpg"
 import gallery2 from "../assets/gallery/gallery2.jpg"
 import gallery3 from "../assets/gallery/gallery3.jpg"
@@ -21,6 +20,7 @@ import gallery19 from "../assets/gallery/galary19.jpg"
 import gallery20 from "../assets/gallery/galary20.jpg"
 import gallery21 from "../assets/gallery/galary21.jpg"
 import gallery22 from "../assets/gallery/galary22.jpg"
+import SEO from "../components/SEO"
 
 // Sample gallery data
 const galleryImages = [
@@ -50,29 +50,58 @@ const galleryImages = [
 
 const Gallery = () => {
   return (
-    <div className="py-16">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-primary mb-2 text-center">Gallery</h1>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Relive the memorable moments from previous editions of TECHPHILIA
-        </p>
+    <>
+      <SEO
+        title="Gallery"
+        description="Explore the visual journey of Techphilia 8.0 through our photo gallery. View moments from workshops, competitions, and celebrations at Amity University Patna's technical festival."
+        keywords="techphilia gallery, amity university patna photos, technical fest pictures, techphilia event photos, workshop images, competition photos, tech festival gallery, amity university patna event gallery"
+        image="https://aiitpevent.in/gallery-og-image.png"
+        url="https://aiitpevent.in/gallery"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Techphilia 8.0 Gallery",
+          "description": "Photo gallery of Techphilia 8.0 - The Annual Technical Festival of Amity University Patna",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Amity University Patna",
+            "url": "https://amity.edu/patna/"
+          },
+          "image": galleryImages.map(image => ({
+            "@type": "ImageObject",
+            "contentUrl": image.src,
+            "name": image.alt,
+            "description": image.alt,
+            "thumbnailUrl": image.src,
+            "uploadDate": "2025-04-21T00:00:00+05:30"
+          }))
+        }}
+      />
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-primary mb-2 text-center">Gallery</h1>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Relive the memorable moments from previous editions of TECHPHILIA
+          </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {galleryImages.map((image) => (
-            <div key={image.id} className="premium-card overflow-hidden group">
-              <div className="relative aspect-square">
-                <img
-                  src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((image) => (
+              <div key={image.id} className="premium-card overflow-hidden group">
+                <div className="relative aspect-square">
+                  <img
+                    src={image.src || "/placeholder.svg"}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"></div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

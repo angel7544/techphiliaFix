@@ -5,9 +5,67 @@ const Leadership = () => {
     <>
       <SEO
         title="Leadership"
-        description="Meet the leadership team behind TECHPHILIA 8.0, the annual technical festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary"
-        keywords="techphilia leadership, amity university patna, technical fest organizers"
-        url="/leadership"
+        description="Meet the distinguished leadership team behind Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Learn about our mentors, organizers, and the visionaries guiding this premier technical event."
+        keywords="techphilia leadership, amity university patna leadership, technical fest organizers, techphilia mentors, amity university patna faculty, technical festival team, event leadership team"
+        image="https://aiitpevent.in/leadership-og-image.png"
+        url="https://aiitpevent.in/leadership"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Techphilia 8.0 Leadership",
+          "description": "Leadership team of Techphilia 8.0 - The Annual Technical Festival of Amity University Patna",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Amity University Patna",
+            "url": "https://amity.edu/patna/"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Techphilia 8.0",
+            "description": "The Annual Technical Festival of Amity University Patna",
+            "url": "https://aiitpevent.in/",
+            "logo": "https://aiitpevent.in/logo.png",
+            "member": [
+              {
+                "@type": "Person",
+                "name": "Dr. Ashok Kumar Chauhan",
+                "jobTitle": "Hon'ble Founder President",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Ritnand Balved Education Foundation"
+                }
+              },
+              {
+                "@type": "Person",
+                "name": "Dr. Atul Chauhan",
+                "jobTitle": "Chancellor",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Amity University Patna"
+                }
+              },
+              {
+                "@type": "Person",
+                "name": "Mr. U. Ramachandran",
+                "jobTitle": "Senior Vice President",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Amity Education Group"
+                }
+              },
+              {
+                "@type": "Person",
+                "name": "Mr. Gaurav Gupta",
+                "jobTitle": "Vice President",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Amity Education Group"
+                }
+              }
+            ]
+          }
+        }}
       />
       <main className="py-16">
         <div className="container mx-auto px-4">
