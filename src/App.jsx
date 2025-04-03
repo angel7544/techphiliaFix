@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
+"use client"
+
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
@@ -6,10 +8,9 @@ import About from "./pages/About"
 import Events from "./pages/Events"
 import Gallery from "./pages/Gallery"
 import Contact from "./pages/Contact"
+import Leadership from "./pages/Leadership"
 import PageTransition from "./components/PageTransition"
 import SEO from "./components/SEO"
-
-import { ThemeProvider } from "./context/ThemeContext"
 import { useEffect } from "react"
 
 // ScrollToTop component to reset scroll position on page change
@@ -27,10 +28,12 @@ function ScrollToTop() {
 function AppContent() {
   return (
     <>
-      <SEO />
+      <SEO /> {/* Default SEO for pages that don't specify their own */}
       <ScrollToTop />
       <Navbar />
-      <div className="pt-16 min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="pt-16">
+        {" "}
+        {/* Add padding-top to account for fixed navbar */}
         <PageTransition>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -38,6 +41,7 @@ function AppContent() {
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/leadership" element={<Leadership />} />
           </Routes>
         </PageTransition>
       </div>
@@ -49,11 +53,9 @@ function AppContent() {
 // Root component
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </ThemeProvider>
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
   )
 }
 
