@@ -65,7 +65,8 @@ const eventsData = [
   {
     id: 2,
     title: "Clash of Minds",
-    description: "Debate Competition: - Battle of intellect and problem-solving skills",
+    description:
+      "Debate Competition: - Battle of intellect and problem-solving skills",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
@@ -105,7 +106,8 @@ const eventsData = [
   {
     id: 3,
     title: "Social Media Designing",
-    description: "Website Designing: - Supported by Google Developer Groups Patna",
+    description:
+      "Website Designing: - Supported by Google Developer Groups Patna",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
@@ -148,8 +150,7 @@ const eventsData = [
   {
     id: 4,
     title: "Code-A-Vita",
-    description:
-      "Debug Code: -Supported by Google Developer Groups Patna",
+    description: "Debug Code: -Supported by Google Developer Groups Patna",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "11:00 AM - 1:30 PM",
@@ -191,7 +192,8 @@ const eventsData = [
   {
     id: 5,
     title: "Tech Story",
-    description: "Narrate your tech journey and innovations through storytelling",
+    description:
+      "Narrate your tech journey and innovations through storytelling",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
@@ -235,7 +237,8 @@ const eventsData = [
   {
     id: 6,
     title: "Tech Shot",
-    description: "Theme: - Street Vibes, Video Making Competition (Online Submission)",
+    description:
+      "Theme: - Street Vibes, Video Making Competition (Online Submission)",
     image: placeholderImage,
     date: "April 21, 2025",
     time: "10:00 AM - 11:00 AM",
@@ -464,8 +467,13 @@ const eventsData = [
   // 22 April 2025 Events
   {
     id: 11,
+
     title: "Hackathon (University)",
     description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
+    title: "Hackathon",
+    description:
+      "Theme: - Digital Earth: Smart Solutions for a Sustainable World",
+
     image: placeholderImage,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
@@ -561,13 +569,16 @@ const eventsData = [
   {
     id: 13,
     title: "Treasure Hunt (University)",
-    description: "Advanced treasure hunt for university students with technical challenges",
+    description:
+      "Advanced treasure hunt for university students with technical challenges",
     image: placeholderImage,
     date: "April 23, 2025",
     time: "9:00 AM - 10:00 AM",
     venue: ": ShriKrishna Science Centre, Gandhi Maidan, Patna.",
     category: "Game",
     day: "23",
+    day: "22",
+
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
       "Each team should consist of 3 to 5 members.",
@@ -709,6 +720,7 @@ const eventsData = [
       },
     ],
   },
+
   {
     id: 16,
     title: "Hackathon (School)",
@@ -769,6 +781,9 @@ const eventsData = [
     ],
   },
 ]
+
+
+
 
 const Events = () => {
   const [activeFilter, setActiveFilter] = useState("all")
