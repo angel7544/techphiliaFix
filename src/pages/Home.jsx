@@ -1,85 +1,126 @@
 "use client"
 
 import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react"
 import CountdownTimer from "../components/CountdownTimer"
 import PartnersMarquee from "../components/PartnersMarquee"
 import SEO from "../components/SEO"
+import earthLogo from "../assets/gallery/earth-day-logo.webp"
 import StructuredData from "../components/StructuredData"
-import { useEffect } from "react"
+import { Leaf, Droplets, Sun, Wind } from "lucide-react"
 
 const Home = () => {
+  const styleRef = useRef(null)
+
+  // Add CSS for marquee animation and to hide the original heading
   useEffect(() => {
+    // Create a style element
     const style = document.createElement("style")
+    styleRef.current = style
+
+    // Define the CSS for the marquee animation and to hide the original heading
     style.textContent = `
-      @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      
-      .animate-marquee {
-        animation: marquee 90s linear infinite;
-        display: flex;
-        width: max-content;
-      }
-      
-      .section-title {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-        margin-bottom: 2rem;
-        color: var(--tw-text-opacity);
-      }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee 90s linear infinite;
+    display: flex;
+    width: max-content;
+  }
+  
+  /* Hide the original "Our Partners" heading in PartnersMarquee */
+  .overflow-hidden.py-10.bg-gray-50 > h2 {
+    display: none;
+  }
+  
+  /* Fix for the marquee container to prevent horizontal scrollbar */
+  .overflow-hidden.py-10.bg-gray-50 {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Center the yellow line under section titles */
+  .section-title::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(to right, #eab308, #22c55e);
-        border-radius: 2px;
-      }
+  /* Earth Day floating elements */
+  .earth-element {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+  }
 
-      .premium-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-      }
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 
-      .dark .premium-card {
-        background: rgba(30, 41, 59, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
+  .earth-element:nth-child(2) {
+    animation-delay: 1s;
+  }
 
-      .premium-button {
-        background: linear-gradient(135deg, #22c55e, #eab308);
-        color: white;
-        padding: 0.75rem 2rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
+  .earth-element:nth-child(3) {
+    animation-delay: 2s;
+  }
 
-      .premium-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-    `
+  .earth-element:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  /* Add rotation animation for Earth Day logo */
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+`
+
+    // Append the style to the document head
     document.head.appendChild(style)
-    return () => document.head.removeChild(style)
+
+    // Clean up on component unmount
+    return () => {
+      if (styleRef.current && document.head.contains(styleRef.current)) {
+        document.head.removeChild(styleRef.current)
+      }
+    }
   }, [])
 
+  // Inside your Home component, add this before the return statement
   const eventStructuredData = {
     "@context": "https://schema.org",
     "@type": "Event",
     name: "Techphilia 8.0",
-    description: "Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary",
-    startDate: "2025-04-19T09:00:00+05:30",
-    endDate: "2025-04-22T18:00:00+05:30",
+    description:
+      "Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary",
+    startDate: "2025-04-21T09:00:00+05:30",
+    endDate: "2025-04-23T18:00:00+05:30",
     location: {
       "@type": "Place",
       name: "Amity University Patna",
@@ -115,305 +156,188 @@ const Home = () => {
         url="/"
       />
       <StructuredData data={eventStructuredData} />
-      <div className="overflow-x-hidden">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('https://example.com/event-bg.jpg')",
-              filter: "brightness(0.7)",
-            }}
-          >
-            {/* Animated Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 animate-gradient"></div>
-            
-            {/* Animated Grid Pattern */}
-            <div className="absolute inset-0 bg-grid-pattern opacity-10 animate-pulse-slow"></div>
+      <main className="overflow-x-hidden">
+        {/* Hero Section with Earth Day Elements - White Background */}
+        <section className="bg-white py-16 md:py-24 relative" aria-labelledby="hero-heading">
+          {/* Floating Earth Day Elements */}
+          <div className="earth-element absolute top-10 left-[10%]">
+            <Leaf size={32} className="text-green-400" />
+          </div>
+          <div className="earth-element absolute top-20 right-[10%]">
+            <Droplets size={32} className="text-blue-400" />
+          </div>
+          <div className="earth-element absolute bottom-20 left-[10%]">
+            <Sun size={32} className="text-yellow-400" />
+          </div>
+          <div className="earth-element absolute bottom-10 right-[10%]">
+            <Wind size={32} className="text-blue-300" />
           </div>
 
-          {/* Content */}
-          <div className="container relative mx-auto px-4 py-20 md:py-32">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Event Badge */}
-              <div className="inline-block mb-6 px-4 py-2 rounded-full bg-primary/20 dark:bg-primary/30 backdrop-blur-sm border border-primary/30 dark:border-primary/50">
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
-                  Annual Technical Event 2025
-                </span>
-              </div>
-
-              {/* Main Title */}
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-up">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-secondary font-medium mb-2">Annual Technical Event 2025</p>
+              <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold text-primary mb-2">
                 TECHPHILIA <span className="text-secondary">8.0</span>
               </h1>
-
-              {/* Subtitle */}
-              <p className="text-lg md:text-xl text-gray-900 dark:text-white mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-                The Annual Technical Extravaganza - Where Innovation Meets Excellence
+              <p className="text-xl md:text-2xl font-semibold text-primary mb-4">
+                IGNITE INNOVATION, EMBRACE THE FUTURE
               </p>
-
-              {/* Description */}
-              <p className="text-base md:text-lg text-gray-900 dark:text-white mb-12 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                Join us for three days of cutting-edge technology, competitions, workshops, and networking opportunities.
+              <p className="text-lg md:text-xl text-gray-700 mb-8">
+                The Annual Technical Extravaganza - Where Innovation Meets Excellence. Join us for three days of
+                cutting-edge technology, competitions, workshops, and networking opportunities.
               </p>
+              <Link
+                to="/events"
+                className="bg-primary hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                aria-label="Explore all events"
+              >
+                Explore Events
+              </Link>
+            </div>
+          </div>
+        </section>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <Link
-                  to="/events"
-                  className="premium-button bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
-                >
-                  Explore Events
-                </Link>
-                <Link
-                  to="/register"
-                  className="premium-button bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-medium backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
-                >
-                  Register Now
-                </Link>
+        {/* About Techphilia 8.0 Section */}
+        <section className="py-16 md:py-24 gradient-bg" aria-labelledby="about-heading">
+          <div className="container mx-auto px-4">
+            {/* Heading in a row - Centered */}
+            <div className="w-full text-center mb-8">
+              <h2 id="about-heading" className="section-title inline-block mx-auto">
+                ABOUT TECHPHILIA 8.0
+              </h2>
+            </div>
+
+            {/* Main content */}
+            <div className="flex flex-col space-y-6 max-w-4xl mx-auto mb-12">
+              <div className="text-gray-700">
+                The Amity Institute of Information Technology, Amity University, Patna, Bihar is happy to host its
+                Annual Technology Fest "Techphilia 8.0", to be held on 21st, 22nd and 23rd April– 2025. The event will
+                give opportunity to many students to learn, compete and gain exposure with a tinge of enjoyment.
               </div>
+              <div className="text-gray-700">
+                This year 13 events are planned with a dream to make it a platform for a Grand Technological
+                Spectacular. We are excited to welcome all the Tech-Savvy students throughout the globe and hope to make
+                it an unforgettable experience for each one of them.
+              </div>
+              <div className="text-gray-700 font-semibold">KEY POINTS:</div>
+              <div className="text-gray-700">
+                TECHPHILIA ATTRACTION: MR. AND MRS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MRS.
+                TECHPHILA 8.0.
+              </div>
+              <div className="text-gray-700">
+                EXEMPLARY MENTOR & LEADERSHIP SCHOOL AWARD : School with maximum winners.
+              </div>
+              <div className="text-gray-700">
+                Students interested in participation may kindly carry their Identity Card of University with them at the
+                competition.
+              </div>
+              <div className="text-gray-700">Participation Certificate for all registered participants.</div>
+              <div className="text-gray-700">Award, Cash Prize and Merit Certificate for winners of the event.</div>
+              <div className="text-gray-700">Free Entry to ShriKrishna Centre for the registered participants.</div>
+            </div>
 
-              {/* Event Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-                {[
-                  { number: "3", label: "Days" },
-                  { number: "20+", label: "Events" },
-                  { number: "1000+", label: "Participants" },
-                  { number: "50+", label: "Workshops" },
-                ].map((stat, index) => (
-                  <div key={index} className="bg-white/5 dark:bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1">{stat.number}</div>
-                    <div className="text-sm text-gray-900 dark:text-white">{stat.label}</div>
-                  </div>
-                ))}
+            {/* Stats with responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="premium-card p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">3</div>
+                <div className="text-secondary font-medium">Days</div>
+              </div>
+              <div className="premium-card p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">20+</div>
+                <div className="text-secondary font-medium">Events</div>
+              </div>
+              <div className="premium-card p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">5000+</div>
+                <div className="text-secondary font-medium">Participants</div>
+              </div>
+              <div className="premium-card p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">₹2,000</div>
+                <div className="text-secondary font-medium">Prizes</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* About Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+        {/* Earth Day Special Section */}
+        <section className="py-16 bg-white" aria-labelledby="earth-day-heading">
           <div className="container mx-auto px-4">
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm font-medium mb-4">
-                About Us
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                TECHPHILIA <span className="text-yellow-500">8.0</span>
+            <div className="w-full text-center mb-8">
+              <h2 id="earth-day-heading" className="section-title inline-block mx-auto">
+                Earth Day Special
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-yellow-500 mx-auto rounded-full"></div>
             </div>
-
-            {/* Main Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-              {/* Left Column - Text Content */}
-              <div className="space-y-6">
-                <div className="prose prose-lg dark:prose-invert">
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    The Amity Institute of Information Technology, Amity University, Patna, Bihar is happy to host its
-                    Annual Technology Fest "Techphilia 8.0", to be held on 19th, 21st and 22nd April– 2025. The event will
-                    give opportunity to many students to learn, compete and gain exposure with a tinge of enjoyment.
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    This year 13 events are planned with a dream to make it a platform for a Grand Technological
-                    Spectacular. We are excited to welcome all the Tech-Savvy students throughout the globe and hope to make
-                    it an unforgettable experience for each one of them.
-                  </p>
-                </div>
-
-                {/* Key Points */}
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Key Highlights
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start space-x-3">
-                      <span className="text-green-500 mt-1">•</span>
-                      <span className="text-gray-700 dark:text-gray-300">
-                        <span className="font-semibold text-green-500">MR. AND MRS. TECHPHILIA 8.0:</span> Win maximum events to become the face of Techphilia 8.0
-                      </span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-green-500 mt-1">•</span>
-                      <span className="text-gray-700 dark:text-gray-300">
-                        <span className="font-semibold text-green-500">ID Required:</span> Students must carry their University Identity Card
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Right Column - Stats Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="group">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                      20+
-                    </div>
-                    <div className="text-gray-700 dark:text-gray-300 font-medium">Events</div>
+            <div className="max-w-4xl mx-auto bg-white rounded-lg p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="md:w-1/3 flex justify-center">
+                  <div className="w-48 h-48 rounded-full bg-transparent p-4 flex items-center justify-center shadow-lg">
+                    <img
+                      src={earthLogo}
+                      alt="Earth Day Logo"
+                      className="w-full h-full object-contain animate-spin-slow"
+                      style={{ mixBlendMode: "multiply" }}
+                    />
                   </div>
                 </div>
-                <div className="group">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                      5000+
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-bold text-primary mb-4">Join Our Green Initiative</h3>
+                  <p className="text-gray-700 mb-4">
+                    This year, TECHPHILIA 8.0 is proud to celebrate World Earth Day with special events focused on
+                    sustainability and environmental innovation. Join us in our commitment to a greener future through
+                    technology and innovation.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex items-center">
+                      <Leaf className="text-green-600 mr-2" size={20} />
+                      <span>Eco-friendly venue</span>
                     </div>
-                    <div className="text-gray-700 dark:text-gray-300 font-medium">Participants</div>
-                  </div>
-                </div>
-                <div className="group sm:col-span-2">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                      ₹2,000
+                    <div className="flex items-center">
+                      <Droplets className="text-blue-500 mr-2" size={20} />
+                      <span>Water conservation</span>
                     </div>
-                    <div className="text-gray-700 dark:text-gray-300 font-medium">Prize Pool</div>
+                    <div className="flex items-center">
+                      <Sun className="text-yellow-500 mr-2" size={20} />
+                      <span>Solar powered demos</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Wind className="text-blue-400 mr-2" size={20} />
+                      <span>Clean energy talks</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Bottom CTA */}
-            <div className="mt-16 text-center">
-              <Link
-                to="/register"
-                className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-green-500 to-yellow-500 text-white font-medium hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl"
-              >
-                Register Now
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </Link>
             </div>
           </div>
         </section>
 
         {/* Countdown Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
-          
-          {/* Animated Circles */}
-          <div className="absolute top-0 left-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-
-          <div className="container relative mx-auto px-4">
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <span className="inline-block px-4 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm font-medium mb-4">
-                Event Countdown
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Mark Your <span className="text-yellow-500">Calendar</span>
+        <section className="py-16 bg-white" aria-labelledby="countdown-heading">
+          <div className="container mx-auto px-4">
+            <div className="w-full text-center mb-12">
+              <h2 id="countdown-heading" className="section-title inline-block mx-auto">
+                Mark Your Calendar
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-yellow-500 mx-auto rounded-full"></div>
             </div>
-
-            {/* Countdown Timer */}
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 backdrop-blur-sm border border-gray-100 dark:border-gray-700">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                  {/* Days */}
-                  <div className="group">
-                    <div className="bg-gradient-to-b from-green-50 to-white dark:from-gray-700 dark:to-gray-800 rounded-xl p-4 md:p-6 text-center border border-green-100 dark:border-green-900/30 hover:border-green-200 dark:hover:border-green-800 transition-all duration-300">
-                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                        <CountdownTimer unit="days" />
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Days</div>
-                    </div>
-                  </div>
-
-                  {/* Hours */}
-                  <div className="group">
-                    <div className="bg-gradient-to-b from-green-50 to-white dark:from-gray-700 dark:to-gray-800 rounded-xl p-4 md:p-6 text-center border border-green-100 dark:border-green-900/30 hover:border-green-200 dark:hover:border-green-800 transition-all duration-300">
-                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                        <CountdownTimer unit="hours" />
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Hours</div>
-                    </div>
-                  </div>
-
-                  {/* Minutes */}
-                  <div className="group">
-                    <div className="bg-gradient-to-b from-green-50 to-white dark:from-gray-700 dark:to-gray-800 rounded-xl p-4 md:p-6 text-center border border-green-100 dark:border-green-900/30 hover:border-green-200 dark:hover:border-green-800 transition-all duration-300">
-                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                        <CountdownTimer unit="minutes" />
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Minutes</div>
-                    </div>
-                  </div>
-
-                  {/* Seconds */}
-                  <div className="group">
-                    <div className="bg-gradient-to-b from-green-50 to-white dark:from-gray-700 dark:to-gray-800 rounded-xl p-4 md:p-6 text-center border border-green-100 dark:border-green-900/30 hover:border-green-200 dark:hover:border-green-800 transition-all duration-300">
-                      <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent mb-2">
-                        <CountdownTimer unit="seconds" />
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Seconds</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Event Date */}
-                <div className="mt-8 text-center">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Event Date: <span className="font-semibold text-green-600 dark:text-green-400">19th - 22nd April 2025</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom CTA */}
-            <div className="mt-12 text-center">
-              <Link
-                to="/register"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-green-500 to-yellow-500 text-white font-medium hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl"
-              >
-                Register Now
-                <svg
-                  className="w-5 h-5 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </Link>
+            <div className="max-w-3xl mx-auto">
+              <CountdownTimer />
             </div>
           </div>
         </section>
 
         {/* Partners Section */}
-        <section className="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10"></div>
-          
-          {/* Animated Circles */}
-          <div className="absolute top-0 left-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-
-          <div className="container relative mx-auto px-4">
+        <section className="py-16" aria-labelledby="partners-heading">
+          <div className="container mx-auto px-4 mb-12">
+            <div className="w-full text-center">
+              <h2 id="partners-heading" className="section-title inline-block mx-auto">
+                Our Partners
+              </h2>
+            </div>
+          </div>
+          {/* PartnersMarquee outside the container for full width */}
+          <div className="overflow-hidden">
             <PartnersMarquee />
           </div>
         </section>
-      </div>
+      </main>
     </>
   )
 }

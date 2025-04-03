@@ -72,12 +72,12 @@ const About = () => {
               }}
             />
           </div>
-          <div >
+          <div>
             <div className="w-full text-center md:text-left mb-6">
               <h1 className="text-4xl font-bold text-primary inline-block">ABOUT AMITY UNIVERSITY PATNA</h1>
             </div>
             <p className="text-gray-700 mb-4">
-              Amity University Patna is a part of 27-years old, leading education group of India, set up with a vision
+              Amity University Patna is a part of 25-years old, leading education group of India, set up with a vision
               to contribute to nation-building through education, where currently more than 1,70,000 students are
               pursuing 300 programmes across campuses in India and abroad.
             </p>
