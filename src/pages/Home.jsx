@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react"
 import CountdownTimer from "../components/CountdownTimer"
 import PartnersMarquee from "../components/PartnersMarquee"
 import SEO from "../components/SEO"
+import earthLogo from "../assets/gallery/earth-day-logo.webp"
 import StructuredData from "../components/StructuredData"
 import { Leaf, Droplets, Sun, Wind } from "lucide-react"
 
@@ -209,7 +210,7 @@ const Home = () => {
                   Explore Events
                 </Link>
                 <a
-                  href="https://forms.gle/YourRegistrationFormLink"
+                  href="https://www.amity.edu/nspg/Techphilia2025/"
                   className="bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
                   aria-label="Register for the event"
                   target="_blank"
@@ -246,7 +247,7 @@ const Home = () => {
               </div>
               <div className="text-gray-700 font-semibold">KEY POINTS:</div>
               <div className="text-gray-700">
-                TECHPHILIA ATTRACTION: MR. AND MRS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MRS.
+                TECHPHILIA ATTRACTION: MR. AND MS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MS.
                 TECHPHILA 8.0.
               </div>
               <div className="text-gray-700">
@@ -296,7 +297,7 @@ const Home = () => {
                 <div className="md:w-1/3 flex justify-center">
                   <div className="w-48 h-48 rounded-full bg-transparent p-4 flex items-center justify-center shadow-lg">
                     <img
-                      src="/images/earth-day-logo.png"
+                      src={earthLogo}
                       alt="Earth Day Logo"
                       className="w-full h-full object-contain animate-spin-slow"
                       style={{ mixBlendMode: "multiply" }}
