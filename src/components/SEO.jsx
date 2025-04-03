@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 import { Helmet } from 'react-helmet-async'
 
 const SEO = ({ title, description, keywords, image, url, type = "website", structuredData }) => {
-  const siteTitle = 'TECHPHILIA 8.0'
-  const defaultDescription = 'Join Techphilia 8.0, the premier annual technical festival of Amity University Patna. Experience cutting-edge competitions, workshops, hackathons, and tech events.'
+  const siteTitle = 'Techphilia 8.0'
+  const defaultDescription = 'Join Techphilia 8.0, the premier annual technical festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary.'
   const defaultImage = 'https://aiitpevent.in/og-image.png'
   const defaultUrl = 'https://aiitpevent.in'
 

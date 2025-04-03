@@ -46,7 +46,7 @@ const Contact = () => {
     <>
       <SEO
         title="Contact"
-        description="Get in touch with the Techphilia 8.0 team. Contact us for event inquiries, registration support, and partnership opportunities at Amity University Patna's technical festival. This website developed by Ayush, Aman Verma and Shubham Choudhary"
+        description="Get in touch with the Techphilia 8.0 team. Contact us for event inquiries, registration support, and partnership opportunities at Amity University Patna's technical festival. This website developed by Ayush, Aman Verma and Shubham Choudhary."
         keywords="contact techphilia, amity university patna contact, techphilia support, technical fest contact, event registration help, techphilia team contact, amity university patna technical fest contact"
         image="https://www.aiitpevent.in/#/contact-og-image.png"
         url="https://www.aiitpevent.in/#/contact"
