@@ -60,6 +60,34 @@ const Home = () => {
     position: absolute;
     animation: float 6s ease-in-out infinite;
     opacity: 0.7;
+    z-index: 1;
+  }
+
+  /* Responsive positioning for earth elements */
+  @media (max-width: 768px) {
+    .earth-element {
+      transform: scale(0.6);
+    }
+    
+    .earth-element.top-left {
+      top: 2% !important;
+      left: 2% !important;
+    }
+    
+    .earth-element.top-right {
+      top: 2% !important;
+      right: 2% !important;
+    }
+    
+    .earth-element.bottom-left {
+      bottom: 2% !important;
+      left: 2% !important;
+    }
+    
+    .earth-element.bottom-right {
+      bottom: 2% !important;
+      right: 2% !important;
+    }
   }
 
   @keyframes float {
@@ -160,32 +188,32 @@ const Home = () => {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Techphilia 8.0",
-          "url": "https://aiitpevent.in/",
-          "description": "The Annual Technical Extravaganza of Amity University Patna",
-          "potentialAction": {
+          name: "Techphilia 8.0",
+          url: "https://aiitpevent.in/",
+          description: "The Annual Technical Extravaganza of Amity University Patna",
+          potentialAction: {
             "@type": "SearchAction",
-            "target": "https://aiitpevent.in/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+            target: "https://aiitpevent.in/search?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
         }}
       />
       <StructuredData data={eventStructuredData} />
       <main className="overflow-x-hidden">
         {/* Hero Section with Earth Day Elements - White Background */}
         <section className="bg-white py-16 md:py-24 relative" aria-labelledby="hero-heading">
-          {/* Floating Earth Day Elements */}
-          <div className="earth-element absolute top-10 left-[10%]">
-            <Leaf size={32} className="text-green-400" />
+          {/* Floating Earth Day Elements - With responsive positioning classes */}
+          <div className="earth-element top-left" style={{ top: "10%", left: "10%" }}>
+            <Leaf size={24} className="text-green-400" />
           </div>
-          <div className="earth-element absolute top-20 right-[15%]">
-            <Droplets size={32} className="text-blue-400" />
+          <div className="earth-element top-right" style={{ top: "20%", right: "15%" }}>
+            <Droplets size={24} className="text-blue-400" />
           </div>
-          <div className="earth-element absolute bottom-20 left-[20%]">
-            <Sun size={32} className="text-yellow-400" />
+          <div className="earth-element bottom-left" style={{ bottom: "20%", left: "20%" }}>
+            <Sun size={24} className="text-yellow-400" />
           </div>
-          <div className="earth-element absolute bottom-20 right-[20%]">
-            <Wind size={32} className="text-blue-300" />
+          <div className="earth-element bottom-right" style={{ bottom: "20%", right: "20%" }}>
+            <Wind size={24} className="text-blue-300" />
           </div>
 
           <div className="container mx-auto px-4 text-center">
@@ -297,7 +325,7 @@ const Home = () => {
                 <div className="md:w-1/3 flex justify-center">
                   <div className="w-48 h-48 rounded-full bg-transparent p-4 flex items-center justify-center shadow-lg">
                     <img
-                      src={earthLogo}
+                      src={earthLogo || "/placeholder.svg"}
                       alt="Earth Day Logo"
                       className="w-full h-full object-contain animate-spin-slow"
                       style={{ mixBlendMode: "multiply" }}
