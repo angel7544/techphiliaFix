@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react"
 import CountdownTimer from "../components/CountdownTimer"
 import PartnersMarquee from "../components/PartnersMarquee"
 import SEO from "../components/SEO"
-import earthLogo from "../assets/gallery/earth-day-logo.webp"
 import StructuredData from "../components/StructuredData"
 import { Leaf, Droplets, Sun, Wind } from "lucide-react"
 
@@ -129,8 +128,8 @@ const Home = () => {
         streetAddress: "Rupaspur",
         addressLocality: "Patna",
         addressRegion: "Bihar",
-        postalCode: "800001",
-        addressCountry: "IN",
+        postalCode: "800001",\
+        addressCountry": "IN",
       },
     },
     image: ["https://aiitpevent.in/logo.png"],
@@ -163,13 +162,13 @@ const Home = () => {
           <div className="earth-element absolute top-10 left-[10%]">
             <Leaf size={32} className="text-green-400" />
           </div>
-          <div className="earth-element absolute top-20 right-[10%]">
+          <div className="earth-element absolute top-20 right-[15%]">
             <Droplets size={32} className="text-blue-400" />
           </div>
-          <div className="earth-element absolute bottom-20 left-[10%]">
+          <div className="earth-element absolute bottom-20 left-[20%]">
             <Sun size={32} className="text-yellow-400" />
           </div>
-          <div className="earth-element absolute bottom-10 right-[10%]">
+          <div className="earth-element absolute bottom-20 right-[20%]">
             <Wind size={32} className="text-blue-300" />
           </div>
 
@@ -186,13 +185,24 @@ const Home = () => {
                 The Annual Technical Extravaganza - Where Innovation Meets Excellence. Join us for three days of
                 cutting-edge technology, competitions, workshops, and networking opportunities.
               </p>
-              <Link
-                to="/events"
-                className="bg-primary hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
-                aria-label="Explore all events"
-              >
-                Explore Events
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/events"
+                  className="bg-primary hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                  aria-label="Explore all events"
+                >
+                  Explore Events
+                </Link>
+                <a
+                  href="https://forms.gle/YourRegistrationFormLink"
+                  className="bg-secondary hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                  aria-label="Register for the event"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Registration
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -221,7 +231,7 @@ const Home = () => {
               </div>
               <div className="text-gray-700 font-semibold">KEY POINTS:</div>
               <div className="text-gray-700">
-                TECHPHILIA ATTRACTION: MR. AND MS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MS.
+                TECHPHILIA ATTRACTION: MR. AND MRS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MRS.
                 TECHPHILA 8.0.
               </div>
               <div className="text-gray-700">
@@ -236,7 +246,7 @@ const Home = () => {
               <div className="text-gray-700">Free Entry to ShriKrishna Centre for the registered participants.</div>
             </div>
 
-            {/* Stats with responsive grid */}
+            {/* Stats with responsive grid - Updated to include 4 boxes */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="premium-card p-6 text-center">
                 <div className="text-4xl font-bold text-primary mb-2">3</div>
@@ -261,7 +271,7 @@ const Home = () => {
         {/* Earth Day Special Section */}
         <section className="py-16 bg-white" aria-labelledby="earth-day-heading">
           <div className="container mx-auto px-4">
-            <div className="w-full text-center mb-8">
+            <div className="w-full text-center mb-12">
               <h2 id="earth-day-heading" className="section-title inline-block mx-auto">
                 Earth Day Special
               </h2>
@@ -271,7 +281,7 @@ const Home = () => {
                 <div className="md:w-1/3 flex justify-center">
                   <div className="w-48 h-48 rounded-full bg-transparent p-4 flex items-center justify-center shadow-lg">
                     <img
-                      src={earthLogo}
+                      src="/images/earth-day-logo.png"
                       alt="Earth Day Logo"
                       className="w-full h-full object-contain animate-spin-slow"
                       style={{ mixBlendMode: "multiply" }}
