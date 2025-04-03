@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /private/
 
 Sitemap: https://aiitpevent.in/sitemap.xml
+
+# Crawl-delay: 10
+# Allow search engines to crawl the site every 10 seconds
 

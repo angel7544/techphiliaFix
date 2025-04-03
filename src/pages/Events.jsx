@@ -870,9 +870,46 @@ const Events = () => {
     <>
       <SEO
         title="Events"
-        description="Explore our exciting lineup of technical competitions, workshops, and activities scheduled for TECHPHILIA 8.0. This website developed by Ayush, Aman Verma and Shubham Choudhary"
-        keywords="techphilia events, hackathon, coding competition, tech quiz, treasure hunt, tech workshops"
-        url="/events"
+        description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Discover workshops, competitions, and tech events from 21st to 23rd April 2025."
+        keywords="techphilia events, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
+        image="https://aiitpevent.in/events-og-image.png"
+        url="https://aiitpevent.in/events"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": eventsData.map((event, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Event",
+              "name": event.title,
+              "description": event.description,
+              "startDate": `2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "T")}+05:30`,
+              "endDate": `2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "T")}+05:30`,
+              "location": {
+                "@type": "Place",
+                "name": event.venue,
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Rupaspur",
+                  "addressLocality": "Patna",
+                  "addressRegion": "Bihar",
+                  "postalCode": "800001",
+                  "addressCountry": "IN"
+                }
+              },
+              "image": event.image,
+              "offers": {
+                "@type": "Offer",
+                "url": event.registrationUrl,
+                "price": "0",
+                "priceCurrency": "INR",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          }))
+        }}
       />
       <div className="py-16">
         <div className="container mx-auto px-4">

@@ -54,9 +54,45 @@ const About = () => {
     <>
       <SEO
         title="About"
-        description="Learn about Amity University Patna and the team behind TECHPHILIA 8.0. This website developed by Ayush, Aman Verma and Shubham Choudhary"
-        keywords="about techphilia, amity university patna, techphilia team, technical festival, technical team"
-        url="/about"
+        description="Learn about Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Discover our mission, team, and the exciting journey of this premier technical event."
+        keywords="about techphilia, amity university patna technical fest, techphilia team, technical festival organizers, amity university patna events, techphilia history, technical fest about us"
+        image="https://aiitpevent.in/about-og-image.png"
+        url="https://aiitpevent.in/about"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Techphilia 8.0",
+          "description": "Learn about Techphilia 8.0 - The Annual Technical Festival of Amity University Patna",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Amity University Patna",
+            "url": "https://amity.edu/patna/"
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Techphilia 8.0",
+            "description": "The Annual Technical Festival of Amity University Patna",
+            "url": "https://aiitpevent.in/",
+            "logo": "https://aiitpevent.in/logo.png",
+            "sameAs": [
+              "https://facebook.com/techphilia",
+              "https://twitter.com/techphilia",
+              "https://instagram.com/techphilia"
+            ],
+            "member": teamMembers.map(member => ({
+              "@type": "Person",
+              "name": member.name,
+              "jobTitle": member.role,
+              "url": member.social.linkedin,
+              "sameAs": [
+                member.social.twitter,
+                member.social.instagram,
+                member.social.github
+              ]
+            }))
+          }
+        }}
       />
     <div className="py-16">
       <div className="container mx-auto px-4">
