@@ -15,19 +15,22 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
-      <PageTransition>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/leadership" element={<Leadership />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </PageTransition>
+      <main className="pt-20">
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/leadership" element={<Leadership />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </PageTransition>
+      </main>
       <Footer />
     </>
   )
 }
 
 export default App
+

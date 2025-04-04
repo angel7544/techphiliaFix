@@ -55,9 +55,9 @@ const About = () => {
       <SEO
         title="About"
         description="Learn about Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website developed by Ayush, Aman Verma and Shubham Choudhary."
-        keywords="about techphilia, amity university patna technical fest, techphilia team, technical festival organizers, amity university patna events, techphilia history, technical fest about us"
-        image="https://www.aiitpevent.in/#/about-og-image.png"
-        url="https://www.aiitpevent.in/#/about"
+        keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
+        image="https://www.aiitpevent.in/about-og-image.png"
+        url="https://www.aiitpevent.in/about"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
