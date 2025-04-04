@@ -1,0 +1,19 @@
+version: '3.8'  # Specify the version of the Docker Compose file format
+
+services:  # Define the services (containers) that make up your application
+  service_name:  # Name of the service
+    image: image_name:tag  # Specify the Docker image to use
+    build:  # Build configuration (if you want to build from a Dockerfile)
+      context: ./path/to/context  # Path to the build context
+      dockerfile: Dockerfile  # Specify the Dockerfile (optional)
+    ports:  # Port mapping
+      - "host_port:container_port"  # Expose ports
+    environment:  # Environment variables
+      - ENV_VAR_NAME=value
+    volumes:  # Mount volumes
+      - host_path:container_path  # Bind mount or named volume
+    networks:  # Specify networks
+      - network_name  # Connect to a specific network
+    depends_on:  # Specify dependencies
+      - other_service_name  # Wait for this service to start before starting this one
+    restart: always  # Restart policy
