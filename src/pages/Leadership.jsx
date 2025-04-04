@@ -6,7 +6,7 @@ const Leadership = () => {
       <SEO
         title="Leadership"
         description="Meet the distinguished leadership team behind Techphilia 8.0. This website developed by Ayush, Aman Verma and Shubham Choudhary."
-        keywords="techphilia leadership, amity university patna leadership, technical fest organizers, techphilia mentors, amity university patna faculty, technical festival team, event leadership team"
+        keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule"
         image="https://www.aiitpevent.in/leadership-og-image.png"
         url="https://www.aiitpevent.in/leadership"
         type="website"
