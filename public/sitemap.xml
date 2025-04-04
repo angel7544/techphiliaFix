@@ -12,6 +12,22 @@
       <image:title>Techphilia 8.0 - Annual Technical Festival</image:title>
       <image:caption>Techphilia 8.0 is the annual technical festival of Amity University Patna</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://aiitpevent.in/favicon.ico</image:loc>
+      <image:title>Techphilia 8.0 Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aiitpevent.in/favicon.svg</image:loc>
+      <image:title>Techphilia 8.0 SVG Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aiitpevent.in/favicon-96x96.png</image:loc>
+      <image:title>Techphilia 8.0 PNG Favicon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aiitpevent.in/apple-touch-icon.png</image:loc>
+      <image:title>Techphilia 8.0 Apple Touch Icon</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://aiitpevent.in/events</loc>
