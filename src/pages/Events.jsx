@@ -244,7 +244,7 @@ const eventsData = [
     date: "April 21, 2025",
     time: "10:00 AM - 11:00 AM",
     venue: "Amity University, Rupaspur Campus, Patna",
-    category: "Photography",
+    category: "Videography",
     day: "21",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
