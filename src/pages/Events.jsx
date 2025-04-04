@@ -1010,7 +1010,7 @@ const Events = () => {
                     alt={event.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-0 right-0 bg-secondary text-white font-bold py-1 px-3 rounded-bl-md">
+                  <div className="absolute top-0 left-0 bg-secondary text-white font-bold py-1 px-3 rounded-md">
                     {event.category}
                   </div>
                 </div>
