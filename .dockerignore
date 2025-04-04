@@ -7,7 +7,6 @@ Dockerfile
 README.md
 .env
 .env.local
-.env.*.local
 dist
 build
 coverage
