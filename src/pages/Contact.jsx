@@ -165,7 +165,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="premium-button w-full flex items-center justify-center"
+                  className="premium-button w-full flex items-center justify-center hover:text-white"
                 >
                   {isSubmitting ? (
                     "Sending..."
