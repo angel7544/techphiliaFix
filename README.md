@@ -41,14 +41,40 @@ yarn dev
 
 ## 🐳 Docker Support
 
-You can also run this application using Docker:
+You can run this application using Docker in two ways:
+
+### Option 1: Using Docker Compose (Recommended)
 
 ```bash
-docker pull ashukr321/techphilia
+# Build and start the containers
+docker-compose up --build
+
+# To run in detached mode
+docker-compose up -d
+
+# To stop the containers
+docker-compose down
+```
+
+### Option 2: Using Docker Commands
+
+```bash
+# Pull the image from Docker Hub
+docker pull ashukr321/techphilia 
+# add latest tag to pull the latest version
+
+# Run the container
 docker run -p 5173:5173 ashukr321/techphilia
 ```
 
 Check out our Docker Hub repository: [ashukr321/techphilia](https://hub.docker.com/u/ashukr321)
+
+### Docker Configuration
+
+The project uses the following Docker configuration:
+- Port: 5173 (Vite's default port)
+- Build context: Root directory
+- Dockerfile: Located in the root directory
 
 ## 🔧 Available Scripts
 
