@@ -18,7 +18,6 @@ import techshot from "../assets/events/techshot.jpg"
 import trasurehuntSchool from "../assets/events/trasurehunt(school).jpg"
 import trasurehuntUniver from "../assets/events/trasurehunt(universities).jpg"
 import workshop from "../assets/events/workshop.jpg"
-import eventPoster from "../assets/gallery/poster.jpg"
 import SEO from "../components/SEO"
 
 // Updated event data with additional information for the info modal
