@@ -1,1 +1,45 @@
 
+name: Publish Docker image 
+# This sets the name of the workflow. It will be displayed in the GitHub Actions UI.
+
+on:
+  push:
+    branches: ["master"]
+    # This specifies that the workflow should be triggered on a push event to the 'master' branch.
+
+jobs:
+  build-and-push:
+    # This defines a job named 'build-and-push' that will run as part of the workflow.
+    runs-on: ubuntu-latest
+    # This specifies the type of virtual machine to run the job on. 'ubuntu-latest' is a commonly used environment.
+
+    steps:
+      - name: Checkout code
+        # This step checks out the repository code so that it can be used in the workflow.
+        uses: actions/checkout@v3
+        # This uses the 'checkout' action at version 3 to pull the code from the repository.
+
+      - name: Set up Docker Buildx
+        # This step sets up Docker Buildx, which is a Docker CLI plugin for extended build capabilities.
+        uses: docker/setup-buildx-action@v2
+        # This uses the 'setup-buildx-action' at version 2 to enable Buildx functionality.
+
+      - name: Login to DockerHub
+        # This step logs into Docker Hub to allow pushing images to the Docker registry.
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          # This retrieves the Docker Hub username from the repository secrets for authentication.
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          # This retrieves the Docker Hub token from the repository secrets for authentication.
+
+      - name: Build and push
+        # This step builds the Docker image and pushes it to Docker Hub.
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          # This specifies the build context, which is the current directory (where the Dockerfile is located).
+          push: true
+          # This indicates that the built image should be pushed to the Docker registry after building.
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/techphilia:latest
+          # This sets the tag for the Docker image, using the username from secrets and tagging it as 'latest'.
