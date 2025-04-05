@@ -875,46 +875,85 @@ const Events = () => {
   return (
     <>
       <SEO
-        title="Events"
-        description="Explore all events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
-        keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
+        title="Events | Techphilia 8.0"
+        description="Explore exciting events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Join workshops, hackathons, coding competitions, and more from April 21-23, 2025. Register now for a transformative tech experience."
+        keywords="techphilia events, techphilia 8.0, technical fest competitions, amity university patna workshops, hackathon patna, Code-A-Vita, Clash of Minds, Social Media Designing, Treasure Hunt, TechShot, amity university events, tech workshops in patna, coding competitions, april 2025 tech events, student tech competitions, bihar tech fest"
         image="https://www.aiitpevent.in/events-og-image.png"
         url="https://www.aiitpevent.in/events"
         type="website"
         structuredData={{
           "@context": "https://schema.org",
-          "@type": "ItemList",
-          "itemListElement": eventsData.map((event, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "item": {
-              "@type": "Event",
-              "name": event.title,
-              "description": event.description,
-              "startDate": `2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "T")}+05:30`,
-              "endDate": `2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "T")}+05:30`,
-              "location": {
-                "@type": "Place",
-                "name": event.venue,
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Rupaspur",
-                  "addressLocality": "Patna",
-                  "addressRegion": "Bihar",
-                  "postalCode": "800001",
-                  "addressCountry": "IN"
-                }
-              },
-              "image": event.image,
-              "offers": {
-                "@type": "Offer",
-                "url": event.registrationUrl,
-                "price": "0",
-                "priceCurrency": "INR",
-                "availability": "https://schema.org/InStock"
-              }
+          "@type": "CollectionPage",
+          "headline": "Techphilia 8.0 Events Schedule",
+          "description": "Complete schedule of events for Techphilia 8.0, the Annual Technical Festival of Amity University Patna from April 21-23, 2025.",
+          "mainContentOfPage": {
+            "@type": "WebPageElement",
+            "cssSelector": ".container"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Amity University Patna",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aiitpevent.in/logo.png"
             }
-          }))
+          },
+          "maintainer": {
+            "@type": "Organization",
+            "name": "Amity Institute of Information Technology"
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": eventsData.map((event, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Event",
+                "name": event.title,
+                "description": event.description,
+                "startDate": `2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "").replace("AM", ":00") || "09:00:00"}+05:30`,
+                "endDate": `2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "").replace("PM", ":00") || "17:00:00"}+05:30`,
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": event.venue,
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Rupaspur",
+                    "addressLocality": "Patna",
+                    "addressRegion": "Bihar",
+                    "postalCode": "800001",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "25.6078",
+                    "longitude": "85.1236"
+                  }
+                },
+                "image": event.image,
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Amity Institute of Information Technology",
+                  "url": "https://amity.edu/patna/"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "url": event.registrationUrl,
+                  "price": "0",
+                  "priceCurrency": "INR",
+                  "availability": "https://schema.org/InStock",
+                  "validFrom": "2025-02-01T00:00:00+05:30"
+                },
+                "performer": {
+                  "@type": "Organization",
+                  "name": "Amity University Patna"
+                },
+                "keywords": ["techphilia", event.category, "technical festival", "amity patna", "tech event"]
+              }
+            }))
+          }
         }}
       />
       <div className="py-16">
@@ -1012,24 +1051,38 @@ const Events = () => {
           {/* Events Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredEvents.map((event) => (
-              <div key={event.id} className="premium-card group">
+              <div 
+                key={event.id} 
+                className="premium-card group" 
+                itemScope 
+                itemType="https://schema.org/Event"
+              >
+                <meta itemProp="startDate" content={`2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "").replace("AM", ":00") || "09:00:00"}+05:30`} />
+                <meta itemProp="endDate" content={`2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "").replace("PM", ":00") || "17:00:00"}+05:30`} />
+                <meta itemProp="eventStatus" content="https://schema.org/EventScheduled" />
+                <meta itemProp="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode" />
+                
                 <div className="relative h-100 overflow-hidden">
                   <img
                     src={event.image || "/placeholder.svg"}
-                    alt={event.title}
+                    alt={`${event.title} - Techphilia 8.0 Event`}
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    itemProp="image"
                   />
-                  <div className="absolute top-0 left-0 bg-secondary text-white font-bold py-1 px-3 rounded-md">
+                  <div 
+                    className="absolute top-0 left-0 bg-secondary text-white font-bold py-1 px-3 rounded-md"
+                    itemProp="keywords"
+                  >
                     {event.category}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-2">{event.title}</h3>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
+                  <h3 className="text-xl font-bold text-primary mb-2" itemProp="name">{event.title}</h3>
+                  <p className="text-gray-600 mb-4" itemProp="description">{event.description}</p>
                   <div className="space-y-2 text-sm text-gray-500">
                     <div className="flex items-center">
                       <Calendar size={16} className="mr-2 text-secondary" />
-                      <span>{event.date}</span>
+                      <span itemProp="startDate">{event.date}</span>
                     </div>
                     <div className="flex items-center">
                       <Clock size={16} className="mr-2 text-secondary" />
@@ -1037,7 +1090,10 @@ const Events = () => {
                     </div>
                     <div className="flex items-center">
                       <MapPin size={16} className="mr-2 text-secondary" />
-                      <span>{event.venue}</span>
+                      <span itemProp="location" itemScope itemType="https://schema.org/Place">
+                        <span itemProp="name">{event.venue}</span>
+                        <meta itemProp="address" content="Rupaspur, Patna, Bihar, 800001, India" />
+                      </span>
                     </div>
                   </div>
                   {/* Updated buttons */}
@@ -1045,6 +1101,7 @@ const Events = () => {
                     <button
                       onClick={() => openInfoModal(event)}
                       className="bg-white border border-primary text-primary hover:bg-primary/5 py-2 px-4 rounded-md transition-colors font-medium"
+                      aria-label={`View details for ${event.title}`}
                     >
                       Info
                     </button>
@@ -1053,7 +1110,15 @@ const Events = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="premium-button hover:text-white text-center flex items-center justify-center"
+                      itemProp="offers" 
+                      itemScope 
+                      itemType="https://schema.org/Offer"
+                      aria-label={`Register for ${event.title}`}
                     >
+                      <meta itemProp="price" content="0" />
+                      <meta itemProp="priceCurrency" content="INR" />
+                      <meta itemProp="availability" content="https://schema.org/InStock" />
+                      <meta itemProp="url" content={event.registrationUrl} />
                       Register
                     </a>
                   </div>
@@ -1072,11 +1137,18 @@ const Events = () => {
             <div
               className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
+              itemScope
+              itemType="https://schema.org/Event"
             >
+              <meta itemProp="startDate" content={`2025-04-${selectedEvent.day}T${selectedEvent.time.split(" - ")[0].replace(" ", "").replace("AM", ":00") || "09:00:00"}+05:30`} />
+              <meta itemProp="endDate" content={`2025-04-${selectedEvent.day}T${selectedEvent.time.split(" - ")[1].replace(" ", "").replace("PM", ":00") || "17:00:00"}+05:30`} />
+              <meta itemProp="eventStatus" content="https://schema.org/EventScheduled" />
+              <meta itemProp="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode" />
+              
               {/* Modal Header */}
               <div className="p-6 border-b border-gray-200">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-2xl font-bold text-primary">{selectedEvent.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary" itemProp="name">{selectedEvent.title}</h3>
                   <button
                     onClick={closeModal}
                     className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -1086,7 +1158,7 @@ const Events = () => {
                   </button>
                 </div>
                 <div className="mt-2 text-sm text-gray-500">
-                  <span className="inline-block bg-secondary text-white px-2 py-1 rounded-md">
+                  <span className="inline-block bg-secondary text-white px-2 py-1 rounded-md" itemProp="keywords">
                     {selectedEvent.category}
                   </span>
                 </div>
@@ -1094,6 +1166,28 @@ const Events = () => {
 
               {/* Modal Body */}
               <div className="p-6">
+                {/* Event Details */}
+                <div className="mb-6">
+                  <p className="text-gray-700 mb-4" itemProp="description">{selectedEvent.description}</p>
+                  <div className="space-y-2 text-sm text-gray-500 mb-4">
+                    <div className="flex items-center">
+                      <Calendar size={16} className="mr-2 text-secondary" />
+                      <span itemProp="startDate">{selectedEvent.date}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Clock size={16} className="mr-2 text-secondary" />
+                      <span>{selectedEvent.time}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <MapPin size={16} className="mr-2 text-secondary" />
+                      <span itemProp="location" itemScope itemType="https://schema.org/Place">
+                        <span itemProp="name">{selectedEvent.venue}</span>
+                        <meta itemProp="address" content="Rupaspur, Patna, Bihar, 800001, India" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
                 {/* Rules Section */}
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-primary mb-3">Rules & Guidelines</h4>
@@ -1115,14 +1209,15 @@ const Events = () => {
                       // For events with multiple faculty coordinators
                       <div className="space-y-4">
                         {selectedEvent.facultyCoordinators.map((coordinator, index) => (
-                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
+                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0" 
+                               itemProp="organizer" itemScope itemType="https://schema.org/Person">
                             <div className="flex items-center mb-1">
                               <User size={16} className="mr-2 text-secondary" />
-                              <span className="text-gray-700">{coordinator.name}</span>
+                              <span className="text-gray-700" itemProp="name">{coordinator.name}</span>
                             </div>
                             <div className="flex items-center">
                               <Phone size={16} className="mr-2 text-secondary" />
-                              <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
+                              <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline" itemProp="telephone">
                                 {coordinator.phone}
                               </a>
                             </div>
@@ -1131,77 +1226,66 @@ const Events = () => {
                       </div>
                     ) : (
                       // For events with a single faculty coordinator
-                      <>
+                      <div itemProp="organizer" itemScope itemType="https://schema.org/Person">
                         <div className="flex items-center mb-2">
                           <User size={16} className="mr-2 text-secondary" />
-                          <span className="text-gray-700">{selectedEvent.facultyCoordinator.name}</span>
+                          <span className="text-gray-700" itemProp="name">{selectedEvent.facultyCoordinator.name}</span>
                         </div>
                         <div className="flex items-center">
                           <Phone size={16} className="mr-2 text-secondary" />
                           <a
                             href={`tel:${selectedEvent.facultyCoordinator.phone}`}
                             className="text-primary hover:underline"
+                            itemProp="telephone"
                           >
                             {selectedEvent.facultyCoordinator.phone}
                           </a>
                         </div>
-                      </>
+                      </div>
                     )}
                   </div>
 
                   {/* Student Coordinators */}
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <h4 className="text-lg font-semibold text-primary mb-3">Student Coordinators</h4>
-                    {selectedEvent.studentCoordinators ? (
-                      // For events with multiple student coordinators
-                      <div className="space-y-4">
-                        {selectedEvent.studentCoordinators.map((coordinator, index) => (
-                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0">
-                            <div className="flex items-center mb-1">
-                              <User size={16} className="mr-2 text-secondary" />
-                              <span className="text-gray-700">{coordinator.name}</span>
-                            </div>
-                            <div className="flex items-center">
-                              <Phone size={16} className="mr-2 text-secondary" />
-                              <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline">
-                                {coordinator.phone}
-                              </a>
-                            </div>
+                    <div className="space-y-4">
+                      {selectedEvent.studentCoordinators?.map((coordinator, index) => (
+                        <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0"
+                             itemProp="performer" itemScope itemType="https://schema.org/Person">
+                          <div className="flex items-center mb-1">
+                            <User size={16} className="mr-2 text-secondary" />
+                            <span className="text-gray-700" itemProp="name">{coordinator.name}</span>
                           </div>
-                        ))}
-                      </div>
-                    ) : (
-                      // For events with a single student coordinator
-                      <>
-                        <div className="flex items-center mb-2">
-                          <User size={16} className="mr-2 text-secondary" />
-                          <span className="text-gray-700">{selectedEvent.studentCoordinator.name}</span>
+                          <div className="flex items-center">
+                            <Phone size={16} className="mr-2 text-secondary" />
+                            <a href={`tel:${coordinator.phone}`} className="text-primary hover:underline" itemProp="telephone">
+                              {coordinator.phone}
+                            </a>
+                          </div>
                         </div>
-                        <div className="flex items-center">
-                          <Phone size={16} className="mr-2 text-secondary" />
-                          <a
-                            href={`tel:${selectedEvent.studentCoordinator.phone}`}
-                            className="text-primary hover:underline"
-                          >
-                            {selectedEvent.studentCoordinator.phone}
-                          </a>
-                        </div>
-                      </>
-                    )}
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Modal Footer */}
-              <div className="p-6 border-t border-gray-200 flex justify-end">
-                <a
-                  href={selectedEvent.registrationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="premium-button hover:text-white"
-                >
-                  Register Now
-                </a>
+                {/* Registration Button */}
+                <div className="mt-6 flex justify-center">
+                  <a
+                    href={selectedEvent.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full premium-button hover:text-white text-center flex items-center justify-center py-3"
+                    itemProp="offers" 
+                    itemScope 
+                    itemType="https://schema.org/Offer"
+                  >
+                    <meta itemProp="price" content="0" />
+                    <meta itemProp="priceCurrency" content="INR" />
+                    <meta itemProp="availability" content="https://schema.org/InStock" />
+                    <meta itemProp="url" content={selectedEvent.registrationUrl} />
+                    Register Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
