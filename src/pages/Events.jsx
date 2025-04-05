@@ -11,6 +11,7 @@ import amivogue from "../assets/events/amivogue.jpg"
 import posterolic from "../assets/events/posterolic.jpg"
 import techQuiz from "../assets/events/techquiz.jpg"
 import techStory from "../assets/events/techstory.jpg"
+import comedy from "../assets/events/comedy.png"
 import snapShot from "../assets/events/snapshot.jpg"
 import socialMedia from "../assets/events/social media.jpg"
 import techshot from "../assets/events/techshot.jpg"
@@ -403,7 +404,7 @@ const eventsData = [
     id: 9,
     title: "Stand Up Comedy",
     description: "Laugh out loud with tech-themed comedy performances",
-    image: eventPoster,
+    image: comedy,
     date: "April 21, 2025",
     time: "11:00 AM - 2:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",

@@ -297,7 +297,7 @@ const Home = () => {
                 <div className="text-secondary font-medium">Days</div>
               </div>
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">20+</div>
+                <div className="text-4xl font-bold text-primary mb-2">15+</div>
                 <div className="text-secondary font-medium">Events</div>
               </div>
               <div className="premium-card p-6 text-center">
