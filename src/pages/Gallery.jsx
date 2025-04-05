@@ -15,9 +15,20 @@ import img11 from "../assets/gallery/img11.jpg"
 import img12 from "../assets/gallery/img12.jpg"
 import img13 from "../assets/gallery/img13.jpg"
 import img14 from "../assets/gallery/img14.jpg"
+import img15 from "../assets/gallery/img15.jpg"
+import img16 from "../assets/gallery/img16.jpg"
+import img17 from "../assets/gallery/img17.jpg"
+import img18 from "../assets/gallery/img18.jpg"
+import img19 from "../assets/gallery/img19.jpg"
+import img20 from "../assets/gallery/img20.jpg"
+import img21 from "../assets/gallery/img21.jpg"
+import imgVideo4 from "../assets/gallery/imgVideo4.png"
+import imgVideo5 from "../assets/gallery/imgVideo5.png"
 import video1 from "../assets/gallery/video1.mp4"
 import video2 from "../assets/gallery/video2.mp4"
 import video3 from "../assets/gallery/video3.mp4"
+import video4 from "../assets/gallery/video4.mp4"
+import video5 from "../assets/gallery/video5.mp4"
 import SEO from "../components/SEO"
 import { Play, X } from "lucide-react"
 
@@ -37,6 +48,13 @@ const galleryImages = [
   { id: 12, src: img12, alt: "Prize distribution" },
   { id: 13, src: img13, alt: "Student presentations" },
   { id: 14, src: img14, alt: "Innovation showcase" },
+  { id: 15, src: img15, alt: "Innovation showcase" },
+  { id: 16, src: img16, alt: "Innovation showcase" },
+  { id: 17, src: img17, alt: "Innovation showcase" },
+  { id: 18, src: img18, alt: "Innovation showcase" },
+  { id: 19, src: img19, alt: "Innovation showcase" },
+  { id: 20, src: img20, alt: "Innovation showcase" },
+  { id: 21, src: img21, alt: "Innovation showcase" },
 ]
 
 // Sample video data
@@ -58,6 +76,18 @@ const galleryVideos = [
     title: "Treasure Hunt (School)",
     thumbnail: img2, // Using an image as thumbnail
     videoUrl: video3,
+  },
+  {
+    id: 4,
+    title: "Techphilia 7.0",
+    thumbnail: imgVideo4, // Using an image as thumbnail
+    videoUrl: video4,
+  },
+  {
+    id: 5,
+    title: "Ganesh Vandana",
+    thumbnail: imgVideo5, // Using an image as thumbnail
+    videoUrl: video5,
   },
 ]
 
