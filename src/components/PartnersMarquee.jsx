@@ -15,7 +15,7 @@ const partners = [
 
 ]
 
-const PartnersMarquee = () => {
+const   PartnersMarquee = () => {
   return (
     <div className="overflow-hidden py-10 bg-gray-50">
       <h2 className="text-center section-title mx-auto mb-12">Our Partners</h2>
