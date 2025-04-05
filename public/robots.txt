@@ -1,12 +1,19 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon-*.png
+Allow: /apple-touch-icon.png
+Allow: /safari-pinned-tab.svg
+Allow: /browserconfig.xml
+Allow: /site.webmanifest
+Allow: /manifest.json
 Allow: /events
 Allow: /about
 Allow: /contact
 Allow: /gallery
 Allow: /leadership
 Allow: /images/
-Allow: /manifest.json
 Allow: /sitemap.xml
 
 Disallow: /node_modules/
@@ -17,6 +24,9 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
 
 Sitemap: https://aiitpevent.in/sitemap.xml
 
@@ -25,4 +35,7 @@ Sitemap: https://aiitpevent.in/sitemap.xml
 
 # Host
 Host: https://aiitpevent.in
+
+# Clean-param
+Clean-param: ref /search/
 
