@@ -3,6 +3,15 @@
 import { useState, useEffect } from "react"
 import { Calendar, Clock, MapPin, Search, X, Phone, User } from "lucide-react"
 import placeholderImage from "../assets/placeholder.svg"
+import codeAvita from "../assets/events/codeavita.jpg"
+import clashOfMinds from "../assets/events/clashofminds.jpg"
+import hackathonUniver from "../assets/events/hackathon.jpg"
+import snapShot from "../assets/events/snapshot.jpg"
+import socialMedia from "../assets/events/social media.jpg"
+import techshot from "../assets/events/techshot.jpg"
+import trasurehuntSchool from "../assets/events/trasurehunt(school).jpg"
+import trasurehuntUniver from "../assets/events/trasurehunt(universities).jpg"
+import workshop from "../assets/events/workshop.jpg"
 import eventPoster from "../assets/gallery/poster.jpg"
 import SEO from "../components/SEO"
 
@@ -13,7 +22,7 @@ const eventsData = [
     id: 1,
     title: "Workshop",
     description: "Hands-on learning experience with industry experts",
-    image: eventPoster,
+    image: workshop,
     date: "April 21, 2025",
     time: "11:00 AM - 4:00 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
@@ -68,7 +77,7 @@ const eventsData = [
     title: "Clash of Minds",
     description:
       "Debate Competition: - Battle of intellect and problem-solving skills",
-    image: eventPoster,
+    image: clashOfMinds,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
@@ -109,7 +118,7 @@ const eventsData = [
     title: "Social Media Designing",
     description:
       "Website Designing: - Supported by Google Developer Groups Patna",
-    image: eventPoster,
+    image: socialMedia,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
@@ -152,7 +161,7 @@ const eventsData = [
     id: 4,
     title: "Code-A-Vita",
     description: "Debug Code: -Supported by Google Developer Groups Patna",
-    image: eventPoster,
+    image: codeAvita,
     date: "April 21, 2025",
     time: "11:00 AM - 1:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
@@ -240,7 +249,7 @@ const eventsData = [
     title: "Tech Shot",
     description:
       "Theme: - Street Vibes, Video Making Competition (Online Submission)",
-    image: eventPoster,
+    image: techshot,
     date: "April 21, 2025",
     time: "10:00 AM - 11:00 AM",
     venue: "Amity University, Rupaspur Campus, Patna",
@@ -284,7 +293,7 @@ const eventsData = [
     id: 7,
     title: "Snap Shot",
     description: "(Online Submission) Theme: - Unnat Bihar Viksit Bihar",
-    image: eventPoster,
+    image: snapShot,
     date: "April 21, 2025",
     time: "11:00 AM - 1:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
@@ -431,7 +440,7 @@ const eventsData = [
     id: 10,
     title: "Treasure Hunt (School)",
     description: "Exciting treasure hunt for school students with tech clues",
-    image: eventPoster,
+    image: trasurehuntSchool,
     date: "April 21, 2025",
     time: "11:00 AM - 12:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna.",
@@ -472,7 +481,7 @@ const eventsData = [
     title: "Hackathon (University)",
     description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
 
-    image: eventPoster,
+    image: hackathonUniver,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna",
@@ -569,7 +578,7 @@ const eventsData = [
     title: "Treasure Hunt (University)",
     description:
       "Advanced treasure hunt for university students with technical challenges",
-    image: eventPoster,
+    image: trasurehuntUniver,
     date: "April 23, 2025",
     time: "9:00 AM - 10:00 AM",
     venue: "ShriKrishna Science Centre, Gandhi Maidan, Patna.",
@@ -1004,11 +1013,11 @@ const Events = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredEvents.map((event) => (
               <div key={event.id} className="premium-card group">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-100 overflow-hidden">
                   <img
                     src={event.image || "/placeholder.svg"}
                     alt={event.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-0 left-0 bg-secondary text-white font-bold py-1 px-3 rounded-md">
                     {event.category}
