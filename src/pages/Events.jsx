@@ -18,8 +18,94 @@ import SEO from "../components/SEO"
 // Updated event data with additional information for the info modal
 const eventsData = [
   // 21 April 2025 Events
+
   {
     id: 1,
+    title: "Social Media Designing",
+    description:
+      "Website Designing: - Supported by Google Developer Groups Patna",
+    image: socialMedia,
+    date: "April 21, 2025",
+    time: "2:30 PM - 5:30 PM",
+    venue: "Amity University, Rupaspur Campus, Patna.",
+    category: "Design",
+    day: "21",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
+    rules: [
+      "Participants will compete individually.",
+      "Participants must design a fully functional social media website where the website should have features including User Registration & Login Profile Page, Post Creation (Text/Image), Like/Comment Feature and Responsive Design.",
+      "Backend Development - Participants will implement a backend with a database (e.g., MySQL, Firebase, MongoDB) for storing user data.",
+      "Use of *no-code/low-code platforms* is allowed but may receive fewer points than fully coded projects.",
+      "Participants must submit their project via live link before the deadline.",
+      "Judging Criteria will include UI/UX Design (30%) – Clean, interactive, and user-friendly interface, Functionality (25%) – Working features like login, post creation, and engagement, Creativity & Innovation (20%) – Unique ideas and additional features, Backend Implementation (15%) – Proper database and server-side logic (bonus marks), Responsiveness & Optimization (10%) – Mobile-friendly and smooth performance.",
+      "No use of pre-built website templates (Bootstrap templates or WordPress themes are not allowed) and AI-generated code is allowed but must be properly modified and implemented.",
+      "Vulgar, offensive, or unethical content in any form will lead to immediate disqualification and no plagiarism – The project should be original and built by the participants.",
+      "Each team will demonstrate their project and they should explain their features, tech stack, and unique aspects of their website.",
+    ],
+    facultyCoordinators: [
+      {
+        name: "Ms. Roshni Sharma",
+        phone: "9905416233",
+      },
+      {
+        name: "Dr. Ramesh Kumar",
+        phone: "6203775658",
+      },
+    ],
+    studentCoordinators: [
+      {
+        name: "Ashutosh Kumar",
+        phone: "7004246315",
+      },
+      {
+        name: "Angel ",
+        phone: "9135893002",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Clash of Minds",
+    description:
+      "Debate Competition: - Battle of intellect and problem-solving skills",
+    image: clashOfMinds,
+    date: "April 21, 2025",
+    time: "2:30 PM - 5:30 PM",
+    venue: "Amity University, Rupaspur Campus, Patna",
+    category: "Competition",
+    day: "21",
+    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
+    rules: [
+      "Each participant/team will be given maximum 10 minutes time to speak either in favour or against of the subject.",
+      "Warning bell will be given after 8 minutes and a final bell after 10 minutes. If the participants exceed the allocated time then the marks will be deducted at the discretion of the judges.",
+      "In the 1st round each debate will be a knockout battle so after the completion of round 1 half of the team will qualify. A spin wheel will spin and the 2-team facing each other will be decided and same which team will go for the motion and against the motion will be decided through spin wheel also.",
+      "Result of 1st round will be declared by the judges as every 2 team debates and it should be the final decision.",
+      "In round 2 topic will be declared on the spot and after the end of round 2, top 3 team will be the winner of CLASH OF THE MIND – DEBATE COMPETITION.",
+      "The decision of the Judge shall be final & binding on all the participants.",
+    ],
+    facultyCoordinators: [
+      {
+        name: "Mr. Niraj Kumar Rai",
+        phone: "7070556501",
+      },
+      {
+        name: "Mr. Suman Kumar Mishra",
+        phone: "9356804110",
+      },
+    ],
+    studentCoordinators: [
+      {
+        name: "Aditya Kumar",
+        phone: "9608383670",
+      },
+      {
+        name: "Ayushi",
+        phone: "8986285596",
+      },
+    ],
+  },
+  {
+    id: 3,
     title: "Workshop",
     description: "Hands-on learning experience with industry experts",
     image: workshop,
@@ -69,91 +155,6 @@ const eventsData = [
       {
         name: "Naincy kushwaha ",
         phone: "9279454588",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Clash of Minds",
-    description:
-      "Debate Competition: - Battle of intellect and problem-solving skills",
-    image: clashOfMinds,
-    date: "April 21, 2025",
-    time: "2:30 PM - 5:30 PM",
-    venue: "Amity University, Rupaspur Campus, Patna",
-    category: "Competition",
-    day: "21",
-    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
-    rules: [
-      "Each participant/team will be given maximum 10 minutes time to speak either in favour or against of the subject.",
-      "Warning bell will be given after 8 minutes and a final bell after 10 minutes. If the participants exceed the allocated time then the marks will be deducted at the discretion of the judges.",
-      "In the 1st round each debate will be a knockout battle so after the completion of round 1 half of the team will qualify. A spin wheel will spin and the 2-team facing each other will be decided and same which team will go for the motion and against the motion will be decided through spin wheel also.",
-      "Result of 1st round will be declared by the judges as every 2 team debates and it should be the final decision.",
-      "In round 2 topic will be declared on the spot and after the end of round 2, top 3 team will be the winner of CLASH OF THE MIND – DEBATE COMPETITION.",
-      "The decision of the Judge shall be final & binding on all the participants.",
-    ],
-    facultyCoordinators: [
-      {
-        name: "Mr. Niraj Kumar Rai",
-        phone: "7070556501",
-      },
-      {
-        name: "Mr. Suman Kumar Mishra",
-        phone: "9356804110",
-      },
-    ],
-    studentCoordinators: [
-      {
-        name: "Aditya Kumar",
-        phone: "9608383670",
-      },
-      {
-        name: "Ayushi",
-        phone: "8986285596",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Social Media Designing",
-    description:
-      "Website Designing: - Supported by Google Developer Groups Patna",
-    image: socialMedia,
-    date: "April 21, 2025",
-    time: "2:30 PM - 5:30 PM",
-    venue: "Amity University, Rupaspur Campus, Patna.",
-    category: "Design",
-    day: "21",
-    registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
-    rules: [
-      "Participants will compete individually.",
-      "Participants must design a fully functional social media website where the website should have features including User Registration & Login Profile Page, Post Creation (Text/Image), Like/Comment Feature and Responsive Design.",
-      "Backend Development - Participants will implement a backend with a database (e.g., MySQL, Firebase, MongoDB) for storing user data.",
-      "Use of *no-code/low-code platforms* is allowed but may receive fewer points than fully coded projects.",
-      "Participants must submit their project via live link before the deadline.",
-      "Judging Criteria will include UI/UX Design (30%) – Clean, interactive, and user-friendly interface, Functionality (25%) – Working features like login, post creation, and engagement, Creativity & Innovation (20%) – Unique ideas and additional features, Backend Implementation (15%) – Proper database and server-side logic (bonus marks), Responsiveness & Optimization (10%) – Mobile-friendly and smooth performance.",
-      "No use of pre-built website templates (Bootstrap templates or WordPress themes are not allowed) and AI-generated code is allowed but must be properly modified and implemented.",
-      "Vulgar, offensive, or unethical content in any form will lead to immediate disqualification and no plagiarism – The project should be original and built by the participants.",
-      "Each team will demonstrate their project and they should explain their features, tech stack, and unique aspects of their website.",
-    ],
-    facultyCoordinators: [
-      {
-        name: "Ms. Roshni Sharma",
-        phone: "9905416233",
-      },
-      {
-        name: "Dr. Ramesh Kumar",
-        phone: "6203775658",
-      },
-    ],
-    studentCoordinators: [
-      {
-        name: "Ashutosh Kumar",
-        phone: "7004246315",
-      },
-      {
-        name: "Angel ",
-        phone: "9135893002",
       },
     ],
   },
