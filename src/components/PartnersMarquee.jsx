@@ -44,6 +44,90 @@ const   PartnersMarquee = () => {
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
           </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
+        ))}{/* Duplicate for seamless looping */}
+        {partners.map((partner) => (
+          <div key={`dup-${partner.id}`} className="flex flex-col items-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-secondary flex items-center justify-center bg-white shadow-md">
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={partner.name}
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+              />
+            </div>
+            <p className="mt-3 text-primary font-medium">{partner.name}</p>
+          </div>
         ))}
       </div>
     </div>

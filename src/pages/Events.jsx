@@ -296,7 +296,7 @@ const eventsData = [
     description: "(Online Submission) Theme: - Unnat Bihar Viksit Bihar",
     image: snapShot,
     date: "April 21, 2025",
-    time: "11:00 AM - 1:30 PM",
+    time: "10:00 AM - 11:00 AM",
     venue: "Amity University, Rupaspur Campus, Patna.",
     category: "Photography",
     day: "21",
