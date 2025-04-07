@@ -5,13 +5,15 @@ import PizzaHut from "../assets/partners/pizzahut.png"
 import gdg from "../assets/partners/gdg.png"
 import Amalfi from "../assets/partners/amalfi.png"
 import urbanOasis from "../assets/partners/urban.png"
+import wsMobility from "../assets/partners/mobility.jpg"
 
 const partners = [
-  { id: 1, name: "InternNexus", logo: internNexus},
+  { id: 1, name: "Urban Oasis", logo: urbanOasis },
   { id: 2, name: "PizzaHut", logo: PizzaHut },
-  { id: 3, name: "Urban Oasis", logo: urbanOasis },
+  { id: 3, name: "InternNexus", logo: internNexus},
   { id: 4, name: "GDG Patna", logo: gdg },
   { id: 5, name: "Amalfi Grand Patna", logo: Amalfi },
+  { id: 6, name: "WS Mobility", logo: wsMobility},
 
 ]
 
@@ -26,7 +28,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -39,7 +41,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -51,7 +53,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -63,7 +65,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -75,7 +77,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -87,7 +89,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -99,7 +101,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -111,7 +113,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
@@ -123,7 +125,7 @@ const   PartnersMarquee = () => {
               <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain"
+                className="w-20 h-20 md:w-20 md:h-20 object-contain"
               />
             </div>
             <p className="mt-3 text-primary font-medium">{partner.name}</p>
