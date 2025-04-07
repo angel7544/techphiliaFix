@@ -6,6 +6,7 @@ import gdg from "../assets/partners/gdg.png"
 import Amalfi from "../assets/partners/amalfi.png"
 import urbanOasis from "../assets/partners/urban.png"
 import wsMobility from "../assets/partners/mobility.jpg"
+import satvik from "../assets/partners/satvik.jpg"
 
 const partners = [
   { id: 1, name: "Urban Oasis", logo: urbanOasis },
@@ -14,6 +15,7 @@ const partners = [
   { id: 4, name: "GDG Patna", logo: gdg },
   { id: 5, name: "Amalfi Grand Patna", logo: Amalfi },
   { id: 6, name: "WS Mobility", logo: wsMobility},
+  { id: 6, name: "satvik", logo: satvik},
 
 ]
 
