@@ -15,7 +15,7 @@ const partners = [
   { id: 4, name: "GDG Patna", logo: gdg },
   { id: 5, name: "Amalfi Grand Patna", logo: Amalfi },
   { id: 6, name: "WS Mobility", logo: wsMobility},
-  { id: 6, name: "satvik", logo: satvik},
+  { id: 6, name: "Satvik Meera", logo: satvik},
 
 ]
 
