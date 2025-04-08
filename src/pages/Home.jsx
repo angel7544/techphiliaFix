@@ -286,7 +286,7 @@ const Home = () => {
                 competition.
               </div>
               <div className="text-gray-700">Participation Certificate for all registered participants.</div>
-              <div className="text-gray-700">Award, Cash Prize and Merit Certificate for winners of the event.</div>
+              <div className="text-gray-700">Award, Cash Prize and Merit Certificate for Winners of the event.</div>
               <div className="text-gray-700">Free Entry to ShriKrishna Centre for the registered participants.</div>
             </div>
 
