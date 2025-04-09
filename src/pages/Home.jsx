@@ -305,7 +305,7 @@ const Home = () => {
                 <div className="text-secondary font-medium">Participants</div>
               </div>
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">₹2,000</div>
+                <div className="text-4xl font-bold text-primary mb-2">₹5,000</div>
                 <div className="text-secondary font-medium">Prizes</div>
               </div>
             </div>

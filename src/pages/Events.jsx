@@ -17,6 +17,7 @@ import socialMedia from "../assets/events/social media.jpg"
 import techshot from "../assets/events/techshot.jpg"
 import trasurehuntSchool from "../assets/events/trasurehunt(school).jpg"
 import trasurehuntUniver from "../assets/events/trasurehunt(universities).jpg"
+import brochureSchool from "../assets/events/Brochure_school.pdf"
 import workshop from "../assets/events/workshop.jpg"
 import SEO from "../components/SEO"
 
@@ -445,7 +446,7 @@ const eventsData = [
   {
     id: 10,
     title: "Hackathon (School)",
-    description: "Theme: - Innovate for Earth",
+    description: "Theme: - Innovate for Earth, Supported by Google Developer Groups Patna",
     image: hackathonSchool,
     date: "April 22, 2025",
     time: "10:00 AM - 6:00 PM",
@@ -473,8 +474,11 @@ const eventsData = [
       "•	Presentation & Pitch (20%) – Clarity and effectiveness of explanation",
       "   Prizes & Recognition",
       "•	Winner: Cash Prize + Certificate",
-      "•	Runner-up: Gift Voucher + Certificate",
-      "•	Participation certificates for all",
+      "•	Winner: ₹1500, 1st Runner-up: ₹1000, 2nd Runner-up: ₹800",
+      "•	Official Certificate from GDG Patna for all top performers",
+      "•	Special Bonus: Complimentary access to the InternNexus Summer Bootcamp for the Winner, 1st Runner-up, and 2nd Runner-up!",
+      "This bootcamp is specially curated to strengthen core tech skills and ignite a passion for cutting-edge technologies at an early age.",
+      "Participation certificates for all",
     ],
     facultyCoordinators: [
       {
@@ -526,7 +530,13 @@ const eventsData = [
       "The hackathon will run for 8 hours and teams must complete their task within the given time.",
       "Judging Criteria includes innovation & creativity (How unique and practical is the solution?), Feasibility (Can this solution be implemented in real life?), Technical Implementation (How well is the solution built?), Presentation & Clarity (How well does the team explain their idea?) and Teamwork & Collaboration (How effectively did the team work together?)",
       "Judges will select the best team based on the criteria. Prizes and certificates will be awarded to the winners.",
-      "Prize pool: Winner: ₹5000, 1st Runner-up: ₹3000, 2nd Runner-up: ₹2000",
+      "•	Winner: Cash Prize + Certificate",
+      "•	Prize pool - Winner: ₹5000, 1st Runner-up: ₹3000, 2nd Runner-up: ₹2000",
+      "•	Official Certificate from GDG Patna for all top performers",
+      "•	Special Bonus: Internship Opportunity:",
+      "•	Winner, 1st Runner-up, and 2nd Runner-up will receive a free internship from InternNexus.",
+      "This internship offers hands-on experience, expert mentorship, and upskilling opportunities aligned with the latest industry standards—empowering students for real-world success.",
+      "Participation certificates for all",
     ],
     facultyCoordinators: [
       {
@@ -1056,17 +1066,17 @@ const Events = () => {
           {/* Events Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredEvents.map((event) => (
-              <div 
-                key={event.id} 
-                className="premium-card group" 
-                itemScope 
+              <div
+                key={event.id}
+                className="premium-card group"
+                itemScope
                 itemType="https://schema.org/Event"
               >
                 <meta itemProp="startDate" content={`2025-04-${event.day}T${event.time.split(" - ")[0].replace(" ", "").replace("AM", ":00") || "09:00:00"}+05:30`} />
                 <meta itemProp="endDate" content={`2025-04-${event.day}T${event.time.split(" - ")[1].replace(" ", "").replace("PM", ":00") || "17:00:00"}+05:30`} />
                 <meta itemProp="eventStatus" content="https://schema.org/EventScheduled" />
                 <meta itemProp="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode" />
-                
+
                 <div className="relative h-100 overflow-hidden">
                   <img
                     src={event.image || "/placeholder.svg"}
@@ -1074,7 +1084,7 @@ const Events = () => {
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     itemProp="image"
                   />
-                  <div 
+                  <div
                     className="absolute top-0 left-0 bg-secondary text-white font-bold py-1 px-3 rounded-md"
                     itemProp="keywords"
                   >
@@ -1115,8 +1125,8 @@ const Events = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="premium-button hover:text-white text-center flex items-center justify-center"
-                      itemProp="offers" 
-                      itemScope 
+                      itemProp="offers"
+                      itemScope
                       itemType="https://schema.org/Offer"
                       aria-label={`Register for ${event.title}`}
                     >
@@ -1149,7 +1159,7 @@ const Events = () => {
               <meta itemProp="endDate" content={`2025-04-${selectedEvent.day}T${selectedEvent.time.split(" - ")[1].replace(" ", "").replace("PM", ":00") || "17:00:00"}+05:30`} />
               <meta itemProp="eventStatus" content="https://schema.org/EventScheduled" />
               <meta itemProp="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode" />
-              
+
               {/* Modal Header */}
               <div className="p-6 border-b border-gray-200">
                 <div className="flex justify-between items-center">
@@ -1192,7 +1202,7 @@ const Events = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Rules Section */}
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-primary mb-3">Rules & Guidelines</h4>
@@ -1214,8 +1224,8 @@ const Events = () => {
                       // For events with multiple faculty coordinators
                       <div className="space-y-4">
                         {selectedEvent.facultyCoordinators.map((coordinator, index) => (
-                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0" 
-                               itemProp="organizer" itemScope itemType="https://schema.org/Person">
+                          <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0"
+                            itemProp="organizer" itemScope itemType="https://schema.org/Person">
                             <div className="flex items-center mb-1">
                               <User size={16} className="mr-2 text-secondary" />
                               <span className="text-gray-700" itemProp="name">{coordinator.name}</span>
@@ -1256,7 +1266,7 @@ const Events = () => {
                     <div className="space-y-4">
                       {selectedEvent.studentCoordinators?.map((coordinator, index) => (
                         <div key={index} className="border-b border-gray-200 pb-2 last:border-0 last:pb-0"
-                             itemProp="performer" itemScope itemType="https://schema.org/Person">
+                          itemProp="performer" itemScope itemType="https://schema.org/Person">
                           <div className="flex items-center mb-1">
                             <User size={16} className="mr-2 text-secondary" />
                             <span className="text-gray-700" itemProp="name">{coordinator.name}</span>
@@ -1280,8 +1290,8 @@ const Events = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full premium-button hover:text-white text-center flex items-center justify-center py-3"
-                    itemProp="offers" 
-                    itemScope 
+                    itemProp="offers"
+                    itemScope
                     itemType="https://schema.org/Offer"
                   >
                     <meta itemProp="price" content="0" />
@@ -1291,6 +1301,14 @@ const Events = () => {
                     Register Now
                   </a>
                 </div>
+                <address className="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-md border border-gray-100 dark:border-gray-600 not-italic">
+                  <p className="text-gray-700 dark:text-gray-300">
+                    <strong>Explore More – Download Our School Brochure: </strong>
+                    <a href={brochureSchool} className="text-secondary hover:underline">
+                      Download Now
+                    </a>
+                  </p>
+                </address>
               </div>
             </div>
           </div>
