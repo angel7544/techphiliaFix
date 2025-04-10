@@ -258,7 +258,7 @@ const Home = () => {
                   Techphilia Events Schedule
                 </a>
                 <a
-                  href="/documents/competition-rules.pdf"
+                  href="/documents/TECHPHILIA BROCHURE UNIVERSITY.pdf"
                   className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
                   aria-label="Techphilia Brochure (University)"
                   target="_blank"
@@ -267,7 +267,7 @@ const Home = () => {
                   Techphilia Brochure (University)
                 </a>
                 <a
-                  href="/documents/workshop-details.pdf"
+                  href="src/assets/events/Brochure_school.pdf"
                   className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
                   aria-label="Techphilia Brochure (School)"
                   target="_blank"
