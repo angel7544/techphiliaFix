@@ -247,6 +247,35 @@ const Home = () => {
                   Registration
                 </a>
               </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                <a
+                  href="/documents/Techphilia Events Schedule.pdf"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                  aria-label="Techphilia schedule"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Techphilia Events Schedule
+                </a>
+                <a
+                  href="/documents/competition-rules.pdf"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                  aria-label="Techphilia Brochure (University)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Techphilia Brochure (University)
+                </a>
+                <a
+                  href="/documents/workshop-details.pdf"
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
+                  aria-label="Techphilia Brochure (School)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Techphilia Brochure (School)
+                </a>
+              </div>
             </div>
           </div>
         </section>
