@@ -201,7 +201,7 @@ const Home = () => {
       <StructuredData data={eventStructuredData} />
       <main className="overflow-x-hidden">
         {/* Hero Section with Earth Day Elements - White Background */}
-        <section className="bg-white py-16 md:py-24 relative" aria-labelledby="hero-heading">
+        <section className="bg-white py-16 md:py-14 relative" aria-labelledby="hero-heading">
           {/* Floating Earth Day Elements - With responsive positioning classes */}
           <div className="earth-element top-left" style={{ top: "10%", left: "10%" }}>
             <Leaf size={24} className="text-green-400" />
@@ -209,10 +209,10 @@ const Home = () => {
           <div className="earth-element top-right" style={{ top: "20%", right: "15%" }}>
             <Droplets size={24} className="text-blue-400" />
           </div>
-          <div className="earth-element bottom-left" style={{ bottom: "20%", left: "20%" }}>
+          <div className="earth-element bottom-left" style={{ bottom: "32%", left: "20%" }}>
             <Sun size={24} className="text-yellow-400" />
           </div>
-          <div className="earth-element bottom-right" style={{ bottom: "20%", right: "20%" }}>
+          <div className="earth-element bottom-right" style={{ bottom: "32%", right: "20%" }}>
             <Wind size={24} className="text-blue-300" />
           </div>
 
@@ -267,7 +267,7 @@ const Home = () => {
                   Techphilia Brochure (University)
                 </a>
                 <a
-                  href="src/assets/events/Brochure_school.pdf"
+                  href="/documents/Brochure_school.pdf"
                   className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-block"
                   aria-label="Techphilia Brochure (School)"
                   target="_blank"

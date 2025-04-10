@@ -17,7 +17,6 @@ import socialMedia from "../assets/events/social media.jpg"
 import techshot from "../assets/events/techshot.jpg"
 import trasurehuntSchool from "../assets/events/trasurehunt(school).jpg"
 import trasurehuntUniver from "../assets/events/trasurehunt(universities).jpg"
-import brochureSchool from "../assets/events/Brochure_school.pdf"
 import workshop from "../assets/events/workshop.jpg"
 import SEO from "../components/SEO"
 
@@ -1301,14 +1300,6 @@ const Events = () => {
                     Register Now
                   </a>
                 </div>
-                <address className="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-md border border-gray-100 dark:border-gray-600 not-italic">
-                  <p className="text-gray-700 dark:text-gray-300">
-                    <strong>Explore More – Download Our Brochure: </strong>
-                    <a href={brochureSchool} className="text-secondary hover:underline">
-                      Download Now
-                    </a>
-                  </p>
-                </address>
               </div>
             </div>
           </div>

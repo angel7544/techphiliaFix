@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#22c55e', // Green
-        secondary: '#eab308', // Yellow
+        primary: '#134b42', // Green
+        secondary: '#ca763a', // Yellow
         dark: {
           bg: '#0f172a',
           card: '#1e293b',
