@@ -1303,7 +1303,7 @@ const Events = () => {
                 </div>
                 <address className="mt-8 p-4 bg-gray-50 dark:bg-gray-700 rounded-md border border-gray-100 dark:border-gray-600 not-italic">
                   <p className="text-gray-700 dark:text-gray-300">
-                    <strong>Explore More – Download Our School Brochure: </strong>
+                    <strong>Explore More – Download Our Brochure: </strong>
                     <a href={brochureSchool} className="text-secondary hover:underline">
                       Download Now
                     </a>
