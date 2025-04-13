@@ -213,12 +213,12 @@ const eventsData = [
     id: 5,
     title: "Clash of Minds",
     description:
-      "Debate Competition: - Battle of intellect and problem-solving skills",
+      "Topic: - NEP (National Education Policy) it will be for the first round and for next round it will be given at the spot (School & University)",
     image: clashOfMinds,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
     venue: "Amity University, Rupaspur Campus, Patna",
-    category: "Competition",
+    category: "Debate",
     day: "21",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
@@ -298,7 +298,7 @@ const eventsData = [
   {
     id: 7,
     title: "Snap Shot",
-    description: "(Online Submission) Theme: - Unnat Bihar Viksit Bihar",
+    description: "Theme: - Unnat Bihar Viksit Bihar (Online Submission)",
     image: snapShot,
     date: "April 21, 2025",
     time: "10:00 AM - 11:00 AM",
