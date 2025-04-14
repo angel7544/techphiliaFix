@@ -312,7 +312,7 @@ const Home = () => {
               <div className="text-gray-700 font-semibold">KEY POINTS:</div>
               <div className="text-gray-700">
                 TECHPHILIA ATTRACTION: MR. AND MS. TECHPHILA 8.0. Those who win maximum events will be our MR. And MS.
-                TECHPHILA 8.0.
+                TECHPHILIA 8.0.
               </div>
               <div className="text-gray-700">
                 EXEMPLARY MENTOR & LEADERSHIP SCHOOL AWARD : School with maximum winners.
@@ -323,7 +323,7 @@ const Home = () => {
               </div>
               <div className="text-gray-700">Participation Certificate for all registered participants.</div>
               <div className="text-gray-700">Award, Cash Prize and Merit Certificate for Winners of the event.</div>
-              <div className="text-gray-700">Free Entry to ShriKrishna Centre for the registered participants.</div>
+              <div className="text-gray-700">Free Entry to ShriKrishna Science Centre for the registered participants.</div>
             </div>
 
             {/* Stats with responsive grid - Updated to include 4 boxes with Counter animation */}
