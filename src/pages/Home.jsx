@@ -8,6 +8,7 @@ import SEO from "../components/SEO"
 import earthLogo from "../assets/gallery/earth-day-logo.webp"
 import StructuredData from "../components/StructuredData"
 import { Leaf, Droplets, Sun, Wind } from "lucide-react"
+import { Counter } from "../components/counter-animation"
 
 const Home = () => {
   const styleRef = useRef(null)
@@ -126,6 +127,12 @@ const Home = () => {
 
   .animate-spin-slow {
     animation: spin-slow 20s linear infinite;
+  }
+
+  /* Counter animation styles */
+  .counter-animation {
+    display: inline-block;
+    transition: all 0.3s ease;
   }
 `
 
@@ -319,22 +326,30 @@ const Home = () => {
               <div className="text-gray-700">Free Entry to ShriKrishna Centre for the registered participants.</div>
             </div>
 
-            {/* Stats with responsive grid - Updated to include 4 boxes */}
+            {/* Stats with responsive grid - Updated to include 4 boxes with Counter animation */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">3</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  <Counter end={3} duration={1500} />
+                </div>
                 <div className="text-secondary font-medium">Days</div>
               </div>
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  <Counter end={15} duration={1800} suffix="+" />
+                </div>
                 <div className="text-secondary font-medium">Events</div>
               </div>
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">5000+</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  <Counter end={5000} duration={2000} suffix="+" />
+                </div>
                 <div className="text-secondary font-medium">Participants</div>
               </div>
               <div className="premium-card p-6 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">₹5,000</div>
+                <div className="text-4xl font-bold text-primary mb-2">
+                  <Counter end={5000} duration={2200} prefix="₹" />
+                </div>
                 <div className="text-secondary font-medium">Prizes</div>
               </div>
             </div>
@@ -426,4 +441,3 @@ const Home = () => {
 }
 
 export default Home
-
