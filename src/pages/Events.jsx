@@ -511,6 +511,8 @@ const eventsData = [
 
     title: "Hackathon (University)",
     description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
+    <a href='/documents/Hackathon_2025_IDEA_Presentation_Format.pptx' className='text-primary hover:underline' download>Click PPT</a> for download ppt and 
+      <a href='/documents/Techphilia 8.0 Hackathon Problem Statements_final-1.docx' className='text-primary hover:underline' download>Click on Problem Statement</a> for download problem statement",
 
     image: hackathonUniver,
     date: "April 22, 2025",
