@@ -2,7 +2,7 @@ import { Github, Instagram, Twitter, Linkedin } from "lucide-react"
 // Import Ayush's image
 import ayushImage from "../assets/developers/ayush.jpg"
 import shubhamImage from "../assets/developers/shubham.jpg"
-import amanImage from "../assets/developers/aman.jpg"
+import amanImage from "../assets/developers/aman1.jpg"
 import Developers from "../components/Developers"
 // Import about page hero image
 import aboutHeroImage from "../assets/developers/university.jpg"
