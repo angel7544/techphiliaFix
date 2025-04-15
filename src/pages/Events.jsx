@@ -519,36 +519,90 @@ const eventsData = [
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     problemStatements: [
       {
-        title: "Smart Waste Management System",
-        description: "Develop an IoT-based solution to optimize waste collection routes and improve recycling rates in urban areas."
+        title: "AI-Powered Plastic Waste Detection from Aerial Images",
+        description: "Develop an AI/ML model that can identify and classify plastic waste in natural environments (beaches, rivers, forests) using drone or satellite imagery. The model should assist local authorities or NGOs in targeting clean-up operations.",
+        technology: "Computer Vision, Satellite/Drones, CNNs, Object Detection (YOLO/Detectron2)",
+        solutionRequirements: [
+          "Data Collection & Annotation: Collect drone/satellite imagery datasets and annotate plastic waste",
+          "Object Detection Model: Implement models like YOLOv5, Faster R-CNN, or Detectron2"
+        ]
       },
       {
-        title: "Renewable Energy Monitoring Platform",
-        description: "Create a dashboard to monitor and optimize the performance of solar panels and wind turbines in real-time."
+        title: "Smart Water Usage Monitoring and Forecasting System",
+        description: "Build an IoT + ML platform that predicts household or agricultural water consumption patterns and suggests optimal usage schedules to reduce wastage and enhance water conservation.",
+        technology: "Time Series Forecasting, IoT Sensors, Anomaly Detection",
+        solutionRequirements: [
+          "IoT Sensor Data Simulator: Simulate water flow data with anomalies",
+          "Forecasting Engine: Use ML or Deep Learning for consumption prediction",
+          "Anomaly Detection Module: Detect leaks and unusual usage patterns"
+        ]
       },
       {
-        title: "Water Conservation Assistant",
-        description: "Build an AI-powered system to detect water leaks and provide personalized water usage recommendations."
+        title: "Deforestation Risk Prediction and Alert System",
+        description: "Use satellite data and ML to identify areas at risk of illegal deforestation. The system should analyze land use changes over time and send early warnings to authorities.",
+        technology: "Remote Sensing, Geospatial Data, LSTM/Transformer models",
+        solutionRequirements: [
+          "Satellite Data Acquisition: Use datasets from NASA, Sentinel, Google Earth Engine",
+          "ML Model for Risk Prediction: Forecast likely deforestation zones",
+          "Alert Engine: Set thresholds for vegetation loss and notify authorities"
+        ]
       },
       {
-        title: "Sustainable Agriculture Tech",
-        description: "Design a solution to help farmers optimize irrigation, fertilizer use, and crop rotation for sustainable farming."
+        title: "Urban Heat Island Effect Visualizer and Reducer",
+        description: "Create an interactive tool that uses satellite and urban data to visualize heat islands in cities and recommend green architecture interventions.",
+        technology: "Geospatial ML, GIS Tools, Data Visualization, Recommender Systems",
+        solutionRequirements: [
+          "Urban Data Aggregation: Collect temperature and vegetation data",
+          "Heat Island Detection: Classify heat-affected areas",
+          "Impact Analysis: Correlate temperature with pollution and health stats",
+          "Green Intervention Recommendation Engine"
+        ]
       },
       {
-        title: "Green Transportation Network",
-        description: "Develop a platform to promote carpooling, bike-sharing, and public transport integration in cities."
+        title: "Sustainable Living AI Assistant",
+        description: "Design a personal AI assistant that guides users toward a sustainable lifestyle by tracking their carbon footprint and suggesting greener alternatives.",
+        technology: "NLP, Recommendation Systems, User Behavior Modeling",
+        solutionRequirements: [
+          "User Activity Logging: Track electricity, travel, and shopping",
+          "Carbon Footprint Estimator: Calculate emissions from activities",
+          "NLP-based Chat Assistant: Build a sustainability-focused chatbot",
+          "Recommender System: Suggest eco-friendly alternatives"
+        ]
       },
       {
-        title: "Air Quality Monitoring System",
-        description: "Create a network of sensors to monitor air quality and provide real-time pollution alerts to citizens."
+        title: "Intelligent Home Power Consumption Monitoring and Optimization System",
+        description: "Develop an AI-powered system that monitors power consumption of different household appliances, identifies energy-draining devices, and recommends optimization strategies.",
+        technology: "Python, TensorFlow, FastAPI, React/Streamlit",
+        solutionRequirements: [
+          "Real-time Power Monitoring and Visualization",
+          "Appliance-Level Consumption Breakdown",
+          "Usage Prediction and Anomaly Detection",
+          "Optimization Suggestions for Energy Efficiency"
+        ]
       },
       {
-        title: "Eco-Friendly Shopping Assistant",
-        description: "Build an app that helps consumers make sustainable shopping choices and track their environmental impact."
+        title: "AI-Driven Eco-Friendly Gardening Assistant",
+        description: "Develop an AI-powered gardening assistant that helps users create and maintain eco-friendly gardens by recommending native plants and optimizing care schedules.",
+        technology: "TensorFlow/Keras, Scikit-learn, FastAPI/Flask, React.js/Streamlit",
+        solutionRequirements: [
+          "Personalized Plant Recommendations",
+          "Watering and Care Optimization",
+          "Plant Disease Detection via Image Recognition",
+          "Eco-Impact Score Calculation",
+          "Companion Planting Suggestions"
+        ]
       },
       {
-        title: "Smart Grid Management",
-        description: "Design a solution to optimize energy distribution and integrate renewable energy sources into the power grid."
+        title: "FairChain – AI-Powered Transparent Agri-Marketplace",
+        description: "Design a digital platform that connects farmers, intermediaries, and consumers with transparent pricing, AI-powered forecasting, and traceability features.",
+        technology: "React Native/Next.js, Django/FastAPI, Time Series models",
+        solutionRequirements: [
+          "Farmer Onboarding and Produce Listing",
+          "AI-Powered Demand Forecasting",
+          "Dynamic Pricing and Fair Profit Sharing",
+          "End-to-End Traceability System",
+          "Transparent Transaction Ledger"
+        ]
       }
     ],
     rules: [
@@ -1376,12 +1430,20 @@ const Events = () => {
                   <h3 className="text-2xl font-bold text-primary">Problem Statements</h3>
                   <div className="flex items-center gap-4">
                     <a
+                      href="/documents/Techpilia 8.0 Hackathon Problem Statements_final-1.docx"
+                      download
+                      className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+                    >
+                      <Download size={18} />
+                      Download Problem Statements
+                    </a>
+                    <a
                       href="/documents/Hackathon_2025_IDEA_Presentation_Format.pptx"
                       download
                       className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
                     >
                       <Download size={18} />
-                      Download PPT
+                      Download PPT Sample
                     </a>
                     <button
                       onClick={closeProblemStatementsModal}
@@ -1395,7 +1457,7 @@ const Events = () => {
               </div>
 
               <div className="p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6">
                   {selectedProblemStatements.map((problem, index) => (
                     <div
                       key={index}
@@ -1403,7 +1465,21 @@ const Events = () => {
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <h4 className="text-xl font-semibold text-primary mb-3">{problem.title}</h4>
-                      <p className="text-gray-700">{problem.description}</p>
+                      <p className="text-gray-700 mb-4">{problem.description}</p>
+                      
+                      <div className="mb-4">
+                        <h5 className="text-lg font-medium text-primary mb-2">Technology Stack</h5>
+                        <p className="text-gray-600">{problem.technology}</p>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-medium text-primary mb-2">Solution Requirements</h5>
+                        <ul className="list-disc pl-5 space-y-2">
+                          {problem.solutionRequirements.map((requirement, reqIndex) => (
+                            <li key={reqIndex} className="text-gray-600">{requirement}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   ))}
                 </div>
