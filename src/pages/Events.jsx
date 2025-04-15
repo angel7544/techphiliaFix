@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Calendar, Clock, MapPin, Search, X, Phone, User, Download } from "lucide-react"
 import placeholderImage from "../assets/placeholder.svg"
 import codeAvita from "../assets/events/codeavita.jpg"
@@ -900,6 +900,23 @@ const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null)
   const [isProblemStatementsModalOpen, setIsProblemStatementsModalOpen] = useState(false)
   const [selectedProblemStatements, setSelectedProblemStatements] = useState([])
+  // Reference to the university hackathon event
+  const universityHackathonRef = useRef(null)
+
+  // Check URL hash on mount to potentially open problem statements modal
+  useEffect(() => {
+    // Find university hackathon event
+    const universityHackathon = eventsData.find(event => event.id === 11);
+    
+    if (window.location.hash === '#hackathon-university' && universityHackathon) {
+      // Store reference to the university hackathon
+      universityHackathonRef.current = universityHackathon;
+      // Open the problem statements modal
+      setSelectedProblemStatements(universityHackathon.problemStatements || []);
+      setIsProblemStatementsModalOpen(true);
+      document.body.style.overflow = "hidden";
+    }
+  }, []);
 
   // Filter events based on both date filter and search query
   useEffect(() => {
