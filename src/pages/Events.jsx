@@ -519,7 +519,7 @@ const eventsData = [
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     problemStatements: [
       {
-        title: "AI-Powered Plastic Waste Detection from Aerial Images",
+        title: "1. AI-Powered Plastic Waste Detection from Aerial Images",
         description: "Develop an AI/ML model that can identify and classify plastic waste in natural environments (beaches, rivers, forests) using drone or satellite imagery. The model should assist local authorities or NGOs in targeting clean-up operations.",
         technology: "Computer Vision, Satellite/Drones, CNNs, Object Detection (YOLO/Detectron2)",
         solutionRequirements: [
@@ -528,7 +528,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Smart Water Usage Monitoring and Forecasting System",
+        title: "2. Smart Water Usage Monitoring and Forecasting System",
         description: "Build an IoT + ML platform that predicts household or agricultural water consumption patterns and suggests optimal usage schedules to reduce wastage and enhance water conservation.",
         technology: "Time Series Forecasting, IoT Sensors, Anomaly Detection",
         solutionRequirements: [
@@ -538,7 +538,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Deforestation Risk Prediction and Alert System",
+        title: "3. Deforestation Risk Prediction and Alert System",
         description: "Use satellite data and ML to identify areas at risk of illegal deforestation. The system should analyze land use changes over time and send early warnings to authorities.",
         technology: "Remote Sensing, Geospatial Data, LSTM/Transformer models",
         solutionRequirements: [
@@ -548,7 +548,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Urban Heat Island Effect Visualizer and Reducer",
+        title: "4. Urban Heat Island Effect Visualizer and Reducer",
         description: "Create an interactive tool that uses satellite and urban data to visualize heat islands in cities and recommend green architecture interventions.",
         technology: "Geospatial ML, GIS Tools, Data Visualization, Recommender Systems",
         solutionRequirements: [
@@ -559,7 +559,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Sustainable Living AI Assistant",
+        title: "5. Sustainable Living AI Assistant",
         description: "Design a personal AI assistant that guides users toward a sustainable lifestyle by tracking their carbon footprint and suggesting greener alternatives.",
         technology: "NLP, Recommendation Systems, User Behavior Modeling",
         solutionRequirements: [
@@ -570,7 +570,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Intelligent Home Power Consumption Monitoring and Optimization System",
+        title: "6. Intelligent Home Power Consumption Monitoring and Optimization System",
         description: "Develop an AI-powered system that monitors power consumption of different household appliances, identifies energy-draining devices, and recommends optimization strategies.",
         technology: "Python, TensorFlow, FastAPI, React/Streamlit",
         solutionRequirements: [
@@ -581,7 +581,7 @@ const eventsData = [
         ]
       },
       {
-        title: "AI-Driven Eco-Friendly Gardening Assistant",
+        title: "7. AI-Driven Eco-Friendly Gardening Assistant",
         description: "Develop an AI-powered gardening assistant that helps users create and maintain eco-friendly gardens by recommending native plants and optimizing care schedules.",
         technology: "TensorFlow/Keras, Scikit-learn, FastAPI/Flask, React.js/Streamlit",
         solutionRequirements: [
@@ -593,7 +593,7 @@ const eventsData = [
         ]
       },
       {
-        title: "FairChain – AI-Powered Transparent Agri-Marketplace",
+        title: "8. FairChain – AI-Powered Transparent Agri-Marketplace",
         description: "Design a digital platform that connects farmers, intermediaries, and consumers with transparent pricing, AI-powered forecasting, and traceability features.",
         technology: "React Native/Next.js, Django/FastAPI, Time Series models",
         solutionRequirements: [
@@ -603,7 +603,8 @@ const eventsData = [
           "End-to-End Traceability System",
           "Transparent Transaction Ledger"
         ]
-      }
+      },
+     
     ],
     rules: [
       "Each team will have minimum 2 and maximum 4 members.",
