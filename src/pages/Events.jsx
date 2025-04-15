@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Calendar, Clock, MapPin, Search, X, Phone, User } from "lucide-react"
+import { Calendar, Clock, MapPin, Search, X, Phone, User, Download } from "lucide-react"
 import placeholderImage from "../assets/placeholder.svg"
 import codeAvita from "../assets/events/codeavita.jpg"
 import clashOfMinds from "../assets/events/clashofminds.jpg"
@@ -508,7 +508,6 @@ const eventsData = [
   // 22 April 2025 Events
   {
     id: 11,
-
     title: "Hackathon (University)",
     description: "Theme: - Digital Earth: Smart Solutions for a Sustainable World, Supported by Google Developer Groups Patna",
     image: hackathonUniver,
@@ -518,6 +517,40 @@ const eventsData = [
     category: "Hackathon",
     day: "22",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
+    problemStatements: [
+      {
+        title: "Smart Waste Management System",
+        description: "Develop an IoT-based solution to optimize waste collection routes and improve recycling rates in urban areas."
+      },
+      {
+        title: "Renewable Energy Monitoring Platform",
+        description: "Create a dashboard to monitor and optimize the performance of solar panels and wind turbines in real-time."
+      },
+      {
+        title: "Water Conservation Assistant",
+        description: "Build an AI-powered system to detect water leaks and provide personalized water usage recommendations."
+      },
+      {
+        title: "Sustainable Agriculture Tech",
+        description: "Design a solution to help farmers optimize irrigation, fertilizer use, and crop rotation for sustainable farming."
+      },
+      {
+        title: "Green Transportation Network",
+        description: "Develop a platform to promote carpooling, bike-sharing, and public transport integration in cities."
+      },
+      {
+        title: "Air Quality Monitoring System",
+        description: "Create a network of sensors to monitor air quality and provide real-time pollution alerts to citizens."
+      },
+      {
+        title: "Eco-Friendly Shopping Assistant",
+        description: "Build an app that helps consumers make sustainable shopping choices and track their environmental impact."
+      },
+      {
+        title: "Smart Grid Management",
+        description: "Design a solution to optimize energy distribution and integrate renewable energy sources into the power grid."
+      }
+    ],
     rules: [
       "Each team will have minimum 2 and maximum 4 members.",
       "Participants must arrange their own necessary equipment, including laptops, software, and any other required resources.",
@@ -811,6 +844,8 @@ const Events = () => {
   // New state for the info modal
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedEvent, setSelectedEvent] = useState(null)
+  const [isProblemStatementsModalOpen, setIsProblemStatementsModalOpen] = useState(false)
+  const [selectedProblemStatements, setSelectedProblemStatements] = useState([])
 
   // Filter events based on both date filter and search query
   useEffect(() => {
@@ -884,6 +919,20 @@ const Events = () => {
       document.body.style.overflow = "auto"
     }
   }, [isModalOpen])
+
+  // Open problem statements modal
+  const openProblemStatementsModal = (event) => {
+    setSelectedProblemStatements(event.problemStatements || [])
+    setIsProblemStatementsModalOpen(true)
+    document.body.style.overflow = "hidden"
+  }
+
+  // Close problem statements modal
+  const closeProblemStatementsModal = () => {
+    setIsProblemStatementsModalOpen(false)
+    setSelectedProblemStatements([])
+    document.body.style.overflow = "auto"
+  }
 
   return (
     <>
@@ -1123,15 +1172,7 @@ const Events = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="premium-button hover:text-white text-center flex items-center justify-center"
-                      itemProp="offers"
-                      itemScope
-                      itemType="https://schema.org/Offer"
-                      aria-label={`Register for ${event.title}`}
                     >
-                      <meta itemProp="price" content="0" />
-                      <meta itemProp="priceCurrency" content="INR" />
-                      <meta itemProp="availability" content="https://schema.org/InStock" />
-                      <meta itemProp="url" content={event.registrationUrl} />
                       Register
                     </a>
                   </div>
@@ -1212,6 +1253,22 @@ const Events = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* Problem Statements Button for University Hackathon */}
+                {selectedEvent.id === 11 && (
+                  <div className="mb-6">
+                    <button
+                      onClick={() => {
+                        closeModal();
+                        openProblemStatementsModal(selectedEvent);
+                      }}
+                      className="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                    >
+                      <Download size={18} />
+                      View Problem Statements
+                    </button>
+                  </div>
+                )}
 
                 {/* Coordinators Section */}
                 <div className="grid md:grid-cols-2 gap-4">
@@ -1298,6 +1355,57 @@ const Events = () => {
                     <meta itemProp="url" content={selectedEvent.registrationUrl} />
                     Register Now
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Problem Statements Modal */}
+        {isProblemStatementsModalOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 modal-overlay"
+            onClick={closeProblemStatementsModal}
+          >
+            <div
+              className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-fade-in"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-6 border-b border-gray-200">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-2xl font-bold text-primary">Problem Statements</h3>
+                  <div className="flex items-center gap-4">
+                    <a
+                      href="/documents/Hackathon_2025_IDEA_Presentation_Format.pptx"
+                      download
+                      className="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+                    >
+                      <Download size={18} />
+                      Download PPT
+                    </a>
+                    <button
+                      onClick={closeProblemStatementsModal}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                      aria-label="Close modal"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {selectedProblemStatements.map((problem, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow animate-slide-up"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <h4 className="text-xl font-semibold text-primary mb-3">{problem.title}</h4>
+                      <p className="text-gray-700">{problem.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
