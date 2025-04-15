@@ -233,7 +233,7 @@ const Home = () => {
                 IGNITE INNOVATION, EMBRACE THE FUTURE
               </p>
               <p className="text-lg md:text-xl text-gray-700 mb-8">
-                The Annual Technical Extravaganza - Where Innovation Meets Excellence. Join us for three days of
+                The annual Technical Extravaganza - Where Innovation Meets Excellence. Join us for three days of
                 cutting-edge technology, competitions, workshops, and networking opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
