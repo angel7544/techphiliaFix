@@ -63,7 +63,7 @@ const CountdownTimer = () => {
         </div>
       </div>
       <div className="text-center mt-4 text-gray-600">
-        <p>April 21, 2025</p>
+        <strong>April 21, 2025</strong>
       </div>
     </div>
   )

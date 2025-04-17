@@ -197,7 +197,7 @@ const Home = () => {
           "@type": "WebSite",
           name: "Techphilia 8.0",
           url: "https://aiitpevent.in/",
-          description: "The Annual Technical Extravaganza of Amity University Patna",
+          description: "The Annual Technical Extravaganza of Amity University Patna -  This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           potentialAction: {
             "@type": "SearchAction",
             target: "https://aiitpevent.in/search?q={search_term_string}",

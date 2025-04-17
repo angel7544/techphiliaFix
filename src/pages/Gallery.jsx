@@ -263,7 +263,7 @@ const Gallery = () => {
           "@type": "ImageGallery",
           name: "Techphilia 8.0 Gallery",
           description:
-            "Photo and video gallery of Techphilia 8.0 - The Annual Technical Festival of Amity University Patna",
+            "Photo and video gallery of Techphilia 8.0 - This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           publisher: {
             "@type": "Organization",
             name: "Amity University Patna",
