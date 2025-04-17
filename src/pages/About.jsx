@@ -68,7 +68,7 @@ const About = () => {
     mainEntity: {
       "@type": "Organization",
       name: "Techphilia 8.0",
-      description: "The Annual Technical Festival of Amity University Patna",
+      description: "The Annual Technical Festival of Amity University Patna - This website was developed by Ayush, Shubham Choudhary, and Aman Verma, Computer Science students at Amity University Patna.",
       url: "https://aiitpevent.in/",
       logo: "https://aiitpevent.in/logo.png",
       sameAs: ["https://facebook.com/techphilia", "https://twitter.com/techphilia", "https://instagram.com/techphilia"],
@@ -76,28 +76,39 @@ const About = () => {
         "@type": "Person",
         name: member.name,
         jobTitle: member.role,
-        url: member.social.linkedin,
-        sameAs: [member.social.twitter, member.social.instagram, member.social.github],
+        linkedin: member.social.linkedin,
+        instagram: member.social.instagram,
+        github: member.social.github,
+        twitter: member.social.twitter,
+        sameAs: [member.social.linkedin, member.social.twitter, member.social.instagram, member.social.github],
       })),
     },
     author: [
       {
         "@type": "Person",
         name: "Ayush",
-        jobTitle: "Web Developer",
-        url: "https://www.linkedin.com/in/its-hardik-soni/",
+        jobTitle: "Software Developer",
+        twitter: "https://x.com/its_hardiksoni?t=ALnLpPME9qKfMyyrQf6U_Q&s=08",
+        linkedin: "https://www.linkedin.com/in/its-hardik-soni/",
+        instagram: "https://www.instagram.com/its.hardiksoni?utm_source=qr&igsh=MXA5bTdldm11ZTM5MQ==",
+        github: "https://github.com/ItsHardikSoni",
       },
       {
         "@type": "Person",
         name: "Shubham Choudhary",
         jobTitle: "Web Developer",
-        url: "https://www.linkedin.com/in/shubham-choudhary-6474b3234",
+        linkedin: "https://www.linkedin.com/in/shubham-choudhary-6474b3234",
+        instagram: "https://www.instagram.com/shubhamchoudharyand?igsh=MWdzdm5hYnNpY2FlNw==",
+        github: "https://github.com/JRshubhu12",
       },
       {
         "@type": "Person",
         name: "Aman Verma",
         jobTitle: "Web Developer",
-        url: "https://www.linkedin.com/in/aman-verma-05b6312a4",
+        twitter: "https://x.com/amanver055?s=11",
+        linkedin: "https://www.linkedin.com/in/aman-verma-05b6312a4",
+        instagram: "https://www.instagram.com/aman.verma055?igsh=MTc5azgxbzRxcGhkOQ%3D%3D&utm_source=qr",
+        github: "https://github.com/amanver02",
       },
     ],
   }
@@ -105,7 +116,7 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Techphilia 8.0 | Developed by Ayush, Shubham Choudhary & Aman Verma"
+        title="About"
         description="Learn about Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
         keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
         image="https://www.aiitpevent.in/about-og-image.png"

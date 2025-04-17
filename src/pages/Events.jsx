@@ -213,7 +213,7 @@ const eventsData = [
     id: 5,
     title: "Clash of Minds",
     description:
-      "Topic: - NEP (National Education Policy) it will be for the first round and for next round it will be given at the spot (School & University)",
+      "Topics: - 1. NEP (National Education Policy). 2. Climate change: Global emergency or social hype. 3. Shoud startup drive innovation batter than established company? 4. Voilent video games should be banned or not.",
     image: clashOfMinds,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
@@ -222,6 +222,8 @@ const eventsData = [
     day: "21",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
+      "The given topics will be for the first round and for next round it will be given at the spot (School & University)",
+      "For or Against will be finalized by lucky draw on the day of event.",
       "Each participant/team will be given maximum 10 minutes time to speak either in favour or against of the subject.",
       "Warning bell will be given after 8 minutes and a final bell after 10 minutes. If the participants exceed the allocated time then the marks will be deducted at the discretion of the judges.",
       "In the 1st round each debate will be a knockout battle so after the completion of round 1 half of the team will qualify. A spin wheel will spin and the 2-team facing each other will be decided and same which team will go for the motion and against the motion will be decided through spin wheel also.",
@@ -889,9 +891,6 @@ const eventsData = [
   },
 ]
 
-
-
-
 const Events = () => {
   const [activeFilter, setActiveFilter] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
@@ -1009,9 +1008,9 @@ const Events = () => {
   return (
     <>
       <SEO
-        title="Events | Techphilia 8.0"
-        description="Explore exciting events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Join workshops, hackathons, coding competitions, and more from April 21-23, 2025. Register now for a transformative tech experience."
-        keywords="techphilia events, techphilia 8.0, technical fest competitions, amity university patna workshops, hackathon patna, Code-A-Vita, Clash of Minds, Social Media Designing, Treasure Hunt, TechShot, amity university events, tech workshops in patna, coding competitions, april 2025 tech events, student tech competitions, bihar tech fest"
+        title="Events"
+        description="Explore exciting events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
+        keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
         image="https://www.aiitpevent.in/events-og-image.png"
         url="https://www.aiitpevent.in/events"
         type="website"
@@ -1019,7 +1018,7 @@ const Events = () => {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "headline": "Techphilia 8.0 Events Schedule",
-          "description": "Complete schedule of events for Techphilia 8.0, the Annual Technical Festival of Amity University Patna from April 21-23, 2025.",
+          "description": "Complete schedule of events for Techphilia 8.0, This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           "mainContentOfPage": {
             "@type": "WebPageElement",
             "cssSelector": ".container"

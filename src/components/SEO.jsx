@@ -22,7 +22,7 @@ const SEO = ({ title, description, keywords, image, url, type = "website", struc
       <meta name="title" content={seoTitle} />
       <meta name="description" content={seoDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="Amity University Patna" />
+      <meta name="author" content="Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna." />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       
       {/* Language Alternatives */}
