@@ -527,6 +527,9 @@ const eventsData = [
         solutionRequirements: [
           "Data Collection & Annotation: Collect drone/satellite imagery datasets and annotate plastic waste",
           "Object Detection Model: Implement models like YOLOv5, Faster R-CNN, or Detectron2"
+        ],
+        secondPhaseModules: [
+          "Visualization Dashboard: The participating team should come up with display detections on a map using Leaflet.js or Mapbox or any similar tools. Include image upload and prediction overlay."
         ]
       },
       {
@@ -537,6 +540,9 @@ const eventsData = [
           "IoT Sensor Data Simulator: Simulate water flow data with anomalies",
           "Forecasting Engine: Use ML or Deep Learning for consumption prediction",
           "Anomaly Detection Module: Detect leaks and unusual usage patterns"
+        ],
+        secondPhaseModules: [
+          "Recommendation Dashboard: Provide usage optimization tips; Suggest appliance upgrades, behavioral nudges"
         ]
       },
       {
@@ -547,6 +553,9 @@ const eventsData = [
           "Satellite Data Acquisition: Use datasets from NASA, Sentinel, Google Earth Engine",
           "ML Model for Risk Prediction: Forecast likely deforestation zones",
           "Alert Engine: Set thresholds for vegetation loss and notify authorities"
+        ],
+        secondPhaseModules: [
+          "Geo-Visualization Tool: Show heatmaps or risk zones on a map; Allow users to click on regions to view past trends"
         ]
       },
       {
@@ -558,6 +567,9 @@ const eventsData = [
           "Heat Island Detection: Classify heat-affected areas",
           "Impact Analysis: Correlate temperature with pollution and health stats",
           "Green Intervention Recommendation Engine"
+        ],
+        secondPhaseModules: [
+          "Interactive Visual Dashboard: Allow users to view current status and simulate future improvements; Use tools like Plotly, Dash, or Streamlit."
         ]
       },
       {
@@ -569,6 +581,9 @@ const eventsData = [
           "Carbon Footprint Estimator: Calculate emissions from activities",
           "NLP-based Chat Assistant: Build a sustainability-focused chatbot",
           "Recommender System: Suggest eco-friendly alternatives"
+        ],
+        secondPhaseModules: [
+          "Personal Dashboard: Display trends, goals, badges for sustainable actions; Gamify the experience with challenges and rewards."
         ]
       },
       {
@@ -580,6 +595,13 @@ const eventsData = [
           "Appliance-Level Consumption Breakdown",
           "Usage Prediction and Anomaly Detection",
           "Optimization Suggestions for Energy Efficiency"
+        ],
+        secondPhaseModules: [
+          "User Dashboard (Display)",
+          "o	Real-time usage chart",
+          "o	Forecast graph",
+          "o	Appliance-wise consumption",
+          "o	Tips for optimization"
         ]
       },
       {
@@ -592,6 +614,23 @@ const eventsData = [
           "Plant Disease Detection via Image Recognition",
           "Eco-Impact Score Calculation",
           "Companion Planting Suggestions"
+        ],
+        secondPhaseModules: [
+          "Web Based Dashboard for the following:",
+          "Plant Recommendation Engine",
+          "• ML model trained on datasets of native and eco-friendly plants per region.",
+          "• Suggest drought-resistant, pollinator-attracting, or air-purifying plants.",
+          "• Use weather data to forecast rainfall and adjust watering needs.",
+          "• Schedule pruning, fertilizing based on plant growth stages.",
+          "Image-Based Plant Health Diagnosis",
+          "• Allow users to upload photos of plants.",
+          "• Use a pre-trained CNN model to detect diseases (e.g., leaf spots, pests).",
+          "• Provide organic treatment recommendations.",
+          "Eco-Impact Calculator",
+          "• Track CO₂ absorbed, water saved, and biodiversity supported.",
+          "• Gamify eco-gardening with scores or badges.",
+          "• Chatbot for quick Q&A about plant care or garden setup.",
+          "• Visual dashboard to track garden progress and impact."
         ]
       },
       {
@@ -604,6 +643,10 @@ const eventsData = [
           "Dynamic Pricing and Fair Profit Sharing",
           "End-to-End Traceability System",
           "Transparent Transaction Ledger"
+        ],
+        secondPhaseModules: [
+          "Consumer App Interface to purchase directly from source-linked producers.",
+          "Buyer Interface (Web/App) with map-based interface to buy local produce, filters by crop, seasonality, distance, and price, and view full profit breakdown per order."
         ]
       },
      
@@ -624,32 +667,32 @@ const eventsData = [
       "•	Special Bonus: Internship Opportunity:",
       "•	Winner, 1st Runner-up, and 2nd Runner-up will receive a free internship from InternNexus.",
       "This internship offers hands-on experience, expert mentorship, and upskilling opportunities aligned with the latest industry standards—empowering students for real-world success.",
-      "Participation certificates for all",
+      "Participation certificates for all"
     ],
     facultyCoordinators: [
       {
         name: "Dr. Naveen Kumar",
-        phone: "8807123596",
+        phone: "8807123596"
       },
       {
         name: "Dr. S.S Divedi",
-        phone: "8787062033",
-      },
+        phone: "8787062033"
+      }
     ],
     studentCoordinators: [
       {
         name: "Rishabh Kumar",
-        phone: "9508287117",
+        phone: "9508287117"
       },
       {
         name: "Md Raiyan",
-        phone: "9508749104",
+        phone: "9508749104"
       },
       {
         name: "Prachi Kumari",
-        phone: "9279499005",
-      },
-    ],
+        phone: "9279499005"
+      }
+    ]
   },
   {
     id: 12,
@@ -1489,11 +1532,25 @@ const Events = () => {
                         <p className="text-gray-600">{problem.technology}</p>
                       </div>
 
-                      <div>
+                      <div className="mb-4">
                         <h5 className="text-lg font-medium text-primary mb-2">Solution Requirements</h5>
                         <ul className="list-disc pl-5 space-y-2">
                           {problem.solutionRequirements.map((requirement, reqIndex) => (
                             <li key={reqIndex} className="text-gray-600">{requirement}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h5 className="text-lg font-medium text-red-600 mb-2">2ND Phase Modules</h5>
+                        <ul className="list-disc pl-5 space-y-2">
+                          {problem.secondPhaseModules.map((module, modIndex) => (
+                            <li 
+                              key={modIndex} 
+                              className={`text-red-600 ${module.startsWith('•') ? 'list-none ml-4' : ''}`}
+                            >
+                              {module}
+                            </li>
                           ))}
                         </ul>
                       </div>
