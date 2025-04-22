@@ -614,21 +614,21 @@ const eventsData = [
           "Companion Planting Suggestions"
         ],
         secondPhaseModules: [
-        "Web Based Dashboard for the following:",
-        "Plant Recommendation Engine",
-        "•	ML model trained on datasets of native and eco-friendly plants per region.",
-        "•	Suggest drought-resistant, pollinator-attracting, or air-purifying plants.",
-        "•	Use weather data to forecast rainfall and adjust watering needs.",
-        "•	Schedule pruning, fertilizing based on plant growth stages.",
-        "Image-Based Plant Health Diagnosis",
-        "•	Allow users to upload photos of plants.",
-        "•	Use a pre-trained CNN model to detect diseases (e.g., leaf spots, pests).",
-        "•	Provide organic treatment recommendations.",
-        "Eco-Impact Calculator",
-        "•	Track CO₂ absorbed, water saved, and biodiversity supported.",
-        "•	Gamify eco-gardening with scores or badges.",
-        "•	Chatbot for quick Q&A about plant care or garden setup.",
-        "•	Visual dashboard to track garden progress and impact."
+          "Web Based Dashboard for the following:",
+          "Plant Recommendation Engine",
+          "• ML model trained on datasets of native and eco-friendly plants per region.",
+          "• Suggest drought-resistant, pollinator-attracting, or air-purifying plants.",
+          "• Use weather data to forecast rainfall and adjust watering needs.",
+          "• Schedule pruning, fertilizing based on plant growth stages.",
+          "Image-Based Plant Health Diagnosis",
+          "• Allow users to upload photos of plants.",
+          "• Use a pre-trained CNN model to detect diseases (e.g., leaf spots, pests).",
+          "• Provide organic treatment recommendations.",
+          "Eco-Impact Calculator",
+          "• Track CO₂ absorbed, water saved, and biodiversity supported.",
+          "• Gamify eco-gardening with scores or badges.",
+          "• Chatbot for quick Q&A about plant care or garden setup.",
+          "• Visual dashboard to track garden progress and impact."
         ]
       },
       {
@@ -1545,7 +1545,12 @@ const Events = () => {
                         <h5 className="text-lg font-medium text-red-600 mb-2">2ND Phase Modules</h5>
                         <ul className="list-disc pl-5 space-y-2">
                           {problem.secondPhaseModules.map((module, modIndex) => (
-                            <li key={modIndex} className="text-red-600">{module}</li>
+                            <li 
+                              key={modIndex} 
+                              className={`text-red-600 ${module.startsWith('•') ? 'list-none ml-4' : ''}`}
+                            >
+                              {module}
+                            </li>
                           ))}
                         </ul>
                       </div>
