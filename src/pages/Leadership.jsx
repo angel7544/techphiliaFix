@@ -4,9 +4,9 @@ const Leadership = () => {
   return (
     <>
       <SEO
-        title="Leadership Team | Techphilia 8.0"
-        description="Meet the distinguished leadership team behind Techphilia 8.0, the Annual Technical Festival of Amity University Patna. Our event is guided by accomplished academicians and professionals who strive for excellence in technology education and innovation."
-        keywords="techphilia leadership, amity university patna leaders, Dr. Ashok Kumar Chauhan, Dr. Atul Chauhan, Dr. Vivekanand Pandey, Amity Institute of Information Technology, AIIT leadership, technical fest organizers, Amity technical committee, Patna technical education leaders, Bihar educational leadership"
+        title="Leadership"
+        description="Meet the distinguished leadership team behind Techphilia 8.0, This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
+        keywords="techphilia leadership, amity university patna leaders, Dr. Ashok Kumar Chauhan, Dr. Atul Chauhan, Dr. Vivekanand Pandey, Amity Institute of Information Technology, AIIT leadership, technical fest organizers, Amity technical committee, Patna technical education leaders, Bihar educational leadership, techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
         image="https://www.aiitpevent.in/leadership-og-image.png"
         url="https://www.aiitpevent.in/leadership"
         type="website"
@@ -14,7 +14,7 @@ const Leadership = () => {
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "Techphilia 8.0 Leadership Team",
-          "description": "The distinguished leadership team guiding Techphilia 8.0, the Annual Technical Festival of Amity University Patna",
+          "description": "The distinguished leadership team guiding Techphilia 8.0, This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           "publisher": {
             "@type": "Organization",
             "name": "Amity University Patna",
@@ -48,7 +48,7 @@ const Leadership = () => {
           "mainEntity": {
             "@type": "Organization",
             "name": "Techphilia 8.0 Leadership Committee",
-            "description": "The organizing committee and leadership team of Techphilia 8.0, the Annual Technical Festival of Amity University Patna",
+            "description": "The organizing committee and leadership team of Techphilia 8.0, This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
             "url": "https://aiitpevent.in/leadership",
             "member": [
               {

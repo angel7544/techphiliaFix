@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-6 text-center">
-          <p className="text-white/90">© {currentYear} TECHPHILIA 8.0. Made by <a href="https://www.instagram.com/its.hardiksoni" className="text-secondary">Ayush</a>.</p>
+          <p className="text-white/90">© {currentYear} TECHPHILIA 8.0 Developed by AIIT Students. </p>
         </div>
       </div>
     </footer>

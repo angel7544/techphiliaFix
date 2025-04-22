@@ -213,7 +213,7 @@ const eventsData = [
     id: 5,
     title: "Clash of Minds",
     description:
-      "Topic: - NEP (National Education Policy) it will be for the first round and for next round it will be given at the spot (School & University)",
+      "Topics: - 1. NEP (National Education Policy). 2. Climate change: Global emergency or social hype. 3. Shoud startup drive innovation batter than established company? 4. Voilent video games should be banned or not.",
     image: clashOfMinds,
     date: "April 21, 2025",
     time: "2:30 PM - 5:30 PM",
@@ -222,6 +222,8 @@ const eventsData = [
     day: "21",
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     rules: [
+      "The given topics will be for the first round and for next round it will be given at the spot (School & University)",
+      "For or Against will be finalized by lucky draw on the day of event.",
       "Each participant/team will be given maximum 10 minutes time to speak either in favour or against of the subject.",
       "Warning bell will be given after 8 minutes and a final bell after 10 minutes. If the participants exceed the allocated time then the marks will be deducted at the discretion of the judges.",
       "In the 1st round each debate will be a knockout battle so after the completion of round 1 half of the team will qualify. A spin wheel will spin and the 2-team facing each other will be decided and same which team will go for the motion and against the motion will be decided through spin wheel also.",
@@ -519,7 +521,7 @@ const eventsData = [
     registrationUrl: "https://www.amity.edu/nspg/Techphilia2025/",
     problemStatements: [
       {
-        title: "AI-Powered Plastic Waste Detection from Aerial Images",
+        title: "1. AI-Powered Plastic Waste Detection from Aerial Images",
         description: "Develop an AI/ML model that can identify and classify plastic waste in natural environments (beaches, rivers, forests) using drone or satellite imagery. The model should assist local authorities or NGOs in targeting clean-up operations.",
         technology: "Computer Vision, Satellite/Drones, CNNs, Object Detection (YOLO/Detectron2)",
         solutionRequirements: [
@@ -531,7 +533,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Smart Water Usage Monitoring and Forecasting System",
+        title: "2. Smart Water Usage Monitoring and Forecasting System",
         description: "Build an IoT + ML platform that predicts household or agricultural water consumption patterns and suggests optimal usage schedules to reduce wastage and enhance water conservation.",
         technology: "Time Series Forecasting, IoT Sensors, Anomaly Detection",
         solutionRequirements: [
@@ -544,7 +546,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Deforestation Risk Prediction and Alert System",
+        title: "3. Deforestation Risk Prediction and Alert System",
         description: "Use satellite data and ML to identify areas at risk of illegal deforestation. The system should analyze land use changes over time and send early warnings to authorities.",
         technology: "Remote Sensing, Geospatial Data, LSTM/Transformer models",
         solutionRequirements: [
@@ -557,7 +559,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Urban Heat Island Effect Visualizer and Reducer",
+        title: "4. Urban Heat Island Effect Visualizer and Reducer",
         description: "Create an interactive tool that uses satellite and urban data to visualize heat islands in cities and recommend green architecture interventions.",
         technology: "Geospatial ML, GIS Tools, Data Visualization, Recommender Systems",
         solutionRequirements: [
@@ -571,7 +573,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Sustainable Living AI Assistant",
+        title: "5. Sustainable Living AI Assistant",
         description: "Design a personal AI assistant that guides users toward a sustainable lifestyle by tracking their carbon footprint and suggesting greener alternatives.",
         technology: "NLP, Recommendation Systems, User Behavior Modeling",
         solutionRequirements: [
@@ -585,7 +587,7 @@ const eventsData = [
         ]
       },
       {
-        title: "Intelligent Home Power Consumption Monitoring and Optimization System",
+        title: "6. Intelligent Home Power Consumption Monitoring and Optimization System",
         description: "Develop an AI-powered system that monitors power consumption of different household appliances, identifies energy-draining devices, and recommends optimization strategies.",
         technology: "Python, TensorFlow, FastAPI, React/Streamlit",
         solutionRequirements: [
@@ -603,7 +605,7 @@ const eventsData = [
         ]
       },
       {
-        title: "AI-Driven Eco-Friendly Gardening Assistant",
+        title: "7. AI-Driven Eco-Friendly Gardening Assistant",
         description: "Develop an AI-powered gardening assistant that helps users create and maintain eco-friendly gardens by recommending native plants and optimizing care schedules.",
         technology: "TensorFlow/Keras, Scikit-learn, FastAPI/Flask, React.js/Streamlit",
         solutionRequirements: [
@@ -632,7 +634,7 @@ const eventsData = [
         ]
       },
       {
-        title: "FairChain – AI-Powered Transparent Agri-Marketplace",
+        title: "8. FairChain – AI-Powered Transparent Agri-Marketplace",
         description: "Design a digital platform that connects farmers, intermediaries, and consumers with transparent pricing, AI-powered forecasting, and traceability features.",
         technology: "React Native/Next.js, Django/FastAPI, Time Series models",
         solutionRequirements: [
@@ -646,7 +648,8 @@ const eventsData = [
           "Consumer App Interface to purchase directly from source-linked producers.",
           "Buyer Interface (Web/App) with map-based interface to buy local produce, filters by crop, seasonality, distance, and price, and view full profit breakdown per order."
         ]
-      }
+      },
+     
     ],
     rules: [
       "Each team will have minimum 2 and maximum 4 members.",
@@ -931,9 +934,6 @@ const eventsData = [
   },
 ]
 
-
-
-
 const Events = () => {
   const [activeFilter, setActiveFilter] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
@@ -1051,9 +1051,9 @@ const Events = () => {
   return (
     <>
       <SEO
-        title="Events | Techphilia 8.0"
-        description="Explore exciting events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. Join workshops, hackathons, coding competitions, and more from April 21-23, 2025. Register now for a transformative tech experience."
-        keywords="techphilia events, techphilia 8.0, technical fest competitions, amity university patna workshops, hackathon patna, Code-A-Vita, Clash of Minds, Social Media Designing, Treasure Hunt, TechShot, amity university events, tech workshops in patna, coding competitions, april 2025 tech events, student tech competitions, bihar tech fest"
+        title="Events"
+        description="Explore exciting events at Techphilia 8.0 - The Annual Technical Festival of Amity University Patna. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
+        keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
         image="https://www.aiitpevent.in/events-og-image.png"
         url="https://www.aiitpevent.in/events"
         type="website"
@@ -1061,7 +1061,7 @@ const Events = () => {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "headline": "Techphilia 8.0 Events Schedule",
-          "description": "Complete schedule of events for Techphilia 8.0, the Annual Technical Festival of Amity University Patna from April 21-23, 2025.",
+          "description": "Complete schedule of events for Techphilia 8.0, This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           "mainContentOfPage": {
             "@type": "WebPageElement",
             "cssSelector": ".container"

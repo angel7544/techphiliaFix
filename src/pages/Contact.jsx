@@ -46,7 +46,7 @@ const Contact = () => {
     <>
       <SEO
         title="Contact"
-        description="Get in touch with the Techphilia 8.0 team. Contact us for event inquiries, registration support, and partnership opportunities at Amity University Patna's technical festival. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
+        description="Get in touch with the Techphilia 8.0 team. This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna."
         keywords="techphilia events, techphilia 8, techphilia 8.0, techphilia, AIIT, technical fest competitions, amity university patna workshops, hackathon, coding competition, tech events schedule, technical teams, technology festival events, tech workshops, student competitions, bihar tech fest schedule, Ayush developer, Shubham Choudhary developer, Aman Verma developer"
         image="https://www.aiitpevent.in/contact-og-image.png"
         url="https://www.aiitpevent.in/contact"
@@ -55,7 +55,7 @@ const Contact = () => {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           "name": "Contact Techphilia 8.0",
-          "description": "Contact information for Techphilia 8.0 - The Annual Technical Festival of Amity University Patna",
+          "description": "Contact information for Techphilia 8.0 - This website was developed by Ayush, Shubham Choudhary and Aman Verma, Computer Science students at Amity University Patna.",
           "publisher": {
             "@type": "Organization",
             "name": "Amity University Patna",
