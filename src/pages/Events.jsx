@@ -598,10 +598,10 @@ const eventsData = [
         ],
         secondPhaseModules: [
           "User Dashboard (Display)",
-          "o	Real-time usage chart",
-          "o	Forecast graph",
-          "o	Appliance-wise consumption",
-          "o	Tips for optimization"
+          "• Real-time usage chart.",
+          "• Forecast graph.",
+          "• Appliance-wise consumption.",
+          "• Tips for optimization."
         ]
       },
       {
