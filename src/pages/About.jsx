@@ -1,4 +1,4 @@
-import { Github, Instagram, Twitter, Linkedin } from "lucide-react"
+import { Github, Instagram, Twitter, Linkedin, Globe } from "lucide-react"
 // Import Ayush's image
 import ayushImage from "../assets/developers/ayush.jpg"
 import shubhamImage from "../assets/developers/shubham.jpg"
@@ -18,10 +18,11 @@ const teamMembers = [
     role: "Developer",
     image: ayushImage,
     social: {
-      twitter: "https://x.com/its_hardiksoni?t=ALnLpPME9qKfMyyrQf6U_Q&s=08",
-      linkedin: "https://www.linkedin.com/in/its-hardik-soni/",
-      instagram: "https://www.instagram.com/its.hardiksoni?utm_source=qr&igsh=MXA5bTdldm11ZTM5MQ==",
+      twitter: "https://x.com/imHardikSoni",
+      linkedin: "https://www.linkedin.com/in/imhardiksoni/",
+      instagram: "https://www.instagram.com/its.hardiksoni",
       github: "https://github.com/ItsHardikSoni",
+      globe: "https://developerayush.me/",
     },
   },
   {
@@ -35,6 +36,7 @@ const teamMembers = [
         "https://www.linkedin.com/in/shubham-choudhary-6474b3234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       instagram: "https://www.instagram.com/shubhamchoudharyand?igsh=MWdzdm5hYnNpY2FlNw==",
       github: "https://github.com/JRshubhu12",
+      globe: "",
     },
   },
   {
@@ -48,6 +50,7 @@ const teamMembers = [
         "https://www.linkedin.com/in/aman-verma-05b6312a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       instagram: "https://www.instagram.com/aman.verma055?igsh=MTc5azgxbzRxcGhkOQ%3D%3D&utm_source=qr",
       github: "https://github.com/amanver02",
+      globe: "",
     },
   },
 ]
@@ -80,7 +83,7 @@ const About = () => {
         instagram: member.social.instagram,
         github: member.social.github,
         twitter: member.social.twitter,
-        sameAs: [member.social.linkedin, member.social.twitter, member.social.instagram, member.social.github],
+        sameAs: [member.social.linkedin, member.social.twitter, member.social.instagram, member.social.github, member.social.globe],
       })),
     },
     author: [
@@ -88,10 +91,11 @@ const About = () => {
         "@type": "Person",
         name: "Ayush",
         jobTitle: "Software Developer",
-        twitter: "https://x.com/its_hardiksoni?t=ALnLpPME9qKfMyyrQf6U_Q&s=08",
-        linkedin: "https://www.linkedin.com/in/its-hardik-soni/",
-        instagram: "https://www.instagram.com/its.hardiksoni?utm_source=qr&igsh=MXA5bTdldm11ZTM5MQ==",
+        twitter: "https://x.com/imHardikSoni",
+        linkedin: "https://www.linkedin.com/in/imhardiksoni/",
+        instagram: "https://www.instagram.com/its.hardiksoni",
         github: "https://github.com/ItsHardikSoni",
+        globe: "https://developerayush.me/",
       },
       {
         "@type": "Person",
@@ -100,6 +104,7 @@ const About = () => {
         linkedin: "https://www.linkedin.com/in/shubham-choudhary-6474b3234",
         instagram: "https://www.instagram.com/shubhamchoudharyand?igsh=MWdzdm5hYnNpY2FlNw==",
         github: "https://github.com/JRshubhu12",
+        globe: "",
       },
       {
         "@type": "Person",
@@ -109,6 +114,7 @@ const About = () => {
         linkedin: "https://www.linkedin.com/in/aman-verma-05b6312a4",
         instagram: "https://www.instagram.com/aman.verma055?igsh=MTc5azgxbzRxcGhkOQ%3D%3D&utm_source=qr",
         github: "https://github.com/amanver02",
+        globe: "",
       },
     ],
   }
@@ -220,6 +226,13 @@ const About = () => {
                         aria-label={`${member.name}'s LinkedIn`}
                       >
                         <Linkedin size={18} />
+                      </a>
+                      <a
+                        href={member.social.globe}
+                        className="text-gray-400 hover:text-primary transition-colors"
+                        aria-label={`${member.name}'s Globe`}
+                      >
+                        <Globe size={18} />
                       </a>
                     </div>
                   </div>
